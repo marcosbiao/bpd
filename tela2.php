@@ -18,10 +18,10 @@
     <![endif]-->
   </head>
   <body>
-      <center> <img src="imagem/foto.png"> </center>
+     <center> <img src="imagem/foto2.png"> </center>
     <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="tela2.php">Profile</a></li>
+        <li role="presentation"><a href="index.html">Home</a></li>
+  <li role="presentation"  class="active"><a href="tela2.php">Profile</a></li>
   <li role="presentation"><a href="#">Messages</a></li>
 </ul>
 
