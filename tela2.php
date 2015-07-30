@@ -18,7 +18,7 @@
     <![endif]-->
   </head>
   <body>
-     <center> <img src="imagem/foto2.png"> </center>
+     <center> <img src="imagem/seadUfrb.png" width="700" height="300"> </center>
     <ul class="nav nav-tabs">
         <li role="presentation"><a href="index.html">Home</a></li>
   <li role="presentation"  class="active"><a href="#">Profile</a></li>
