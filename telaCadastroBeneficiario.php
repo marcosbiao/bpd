@@ -1,8 +1,14 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+<html lang="pt">
 
+<?php include("head.html")?>
+    <body>
+        <center> <img src="imagem/seadUfrb.png" width="700" height="300"> </center>
+        <?php include("cabecario.html") ?>
+        
+        
+        
+        
+    </body>
+
+</html>
