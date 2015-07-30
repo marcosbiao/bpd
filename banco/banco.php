@@ -2,8 +2,8 @@
 
 $host= '127.0.0.1';
 $bd= 'root';
-$senhabd= '';
-$database = "terminalidade";
+$senhabd= 'biaobcet1';
+$database = "bpd";
 	
 function conectaBanco ()
 {
