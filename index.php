@@ -10,5 +10,6 @@
       
       
     <?php include("script.html"); ?>
+    <?php include("foot.html"); ?>
   </body>
 </html>
