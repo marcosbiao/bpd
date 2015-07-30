@@ -1,1 +1,6 @@
-{"elements":{},"attributes":{"aria-expanded":{"context":"a"}}}
+{
+    "elements": {},
+    "attributes": {
+        "aria-expanded": {}
+    }
+}
