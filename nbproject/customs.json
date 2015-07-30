@@ -1,8 +1,6 @@
 {
     "elements": {},
     "attributes": {
-        "aria-expanded": {
-            "context": "a"
-        }
+        "aria-expanded": {}
     }
 }
