@@ -9,7 +9,7 @@
         
         Tela cadastro de beneficiario
         
-        
+        <?php include("script.html"); ?>
     </body>
 
 </html>
