@@ -13,7 +13,7 @@
                Bolsa Estagio <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="#">Cadastrar beneficiario</a></li>
+                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar beneficiario</a></li>
                 <li role="presentation"><a href="#">Consultar beneficiario</a></li>
                 <li role="presentation"><a href="#">Solicitar bolsa</a></li>
                 <li role="presentation"><a href="#">Consultar solicitação de bolsa</a></li>
@@ -25,7 +25,7 @@
                Bolsa Pesquisa <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="#">Cadastrar beneficiario</a></li>
+                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar beneficiario</a></li>
                 <li role="presentation"><a href="#">Consultar beneficiario</a></li>
                 <li role="presentation"><a href="#">Solicitar bolsa</a></li>
                 <li role="presentation"><a href="#">Consultar solicitação de bolsa</a></li>
@@ -37,7 +37,7 @@
                Diarias <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="#">Cadastrar beneficiario</a></li>
+                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar beneficiario</a></li>
                 <li role="presentation"><a href="#">Consultar beneficiario</a></li>
                 <li role="presentation"><a href="#">Solicitar bolsa</a></li>
                 <li role="presentation"><a href="#">Consultar solicitação de bolsa</a></li>
@@ -49,7 +49,7 @@
                Passagens <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-                <li role="presentation"><a href="#">Cadastrar beneficiario</a></li>
+                <li role="presentation"><a href="telaCadastroBeneficiario.php">Cadastrar beneficiario</a></li>
                 <li role="presentation"><a href="#">Consultar beneficiario</a></li>
                 <li role="presentation"><a href="#">Solicitar bolsa</a></li>
                 <li role="presentation"><a href="#">Consultar solicitação de bolsa</a></li>
