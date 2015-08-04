@@ -7,7 +7,7 @@
         
         <div class="container panel panel-default">
 			</br></br>
-                        <form action = "fachadaCadastroBeneficiario.php" method = "POST">
+                        <form action = "fachadaCadastrarPrograma.php" method = "POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
 					<h3>Dados obrigatorios</h3>
