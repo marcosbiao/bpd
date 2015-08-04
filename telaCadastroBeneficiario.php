@@ -9,7 +9,7 @@
         
         <div class="container panel panel-default">
 			</br></br>
-                        <form action = "fachadaCadastroBeneficiario.php" method = "POST" onsubmit = "return index;">
+                        <form action = "fachadaCadastroBeneficiario.php" method = "POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
 					<h3>Dados obrigatorios</h3>
@@ -30,12 +30,12 @@
 					
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">RG/RNE</span>
-	  					<input type="text" class="form-control" id = "textFieldRg" name="textFielRg" placeholder="" aria-describedby="sizing-addon2">
+	  					<input type="text" class="form-control" id = "textFieldRg" name="textFieldRg" placeholder="" aria-describedby="sizing-addon2">
 					</div>
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Orgão emissor(RG)</span>
-	  					<input type="text" class="form-control" id = "textFieldOrgaoEmissor" name="textFielOrgaoEmissor" placeholder="SSPBA" aria-describedby="sizing-addon2">
+	  					<input type="text" class="form-control" id = "textFieldOrgaoEmissor" name="textFieldOrgaoEmissor" placeholder="SSPBA" aria-describedby="sizing-addon2">
 					</div>
                                         
                                         <div class="input-group">
