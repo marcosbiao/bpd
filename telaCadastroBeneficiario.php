@@ -4,12 +4,12 @@
 
     <?php include("head.html");  ?>
     <body>
-        <center> <img src="imagem/seadUfrb.png" width="700" height="300"> </center>
+        
        <?php  include("cabecario.html");  ?>
         
         <div class="container panel panel-default">
 			</br></br>
-			<form action = "#" method = "POST" onsubmit = "return pavilhao();">
+                        <form action = "fachadaCadastroBeneficiario.php" method = "POST" onsubmit = "return index;">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
 					<h3>Dados obrigatorios</h3>
