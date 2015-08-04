@@ -15,7 +15,7 @@
 					<h3>Dados obrigatorios</h3>
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">CPF/Passaporte</span>
-	  					<input type="text" class="form-control" id="textFieldCpf" name="textFieldCpf" placeholder="" aria-describedby="sizing-addon2">
+	  					<input type="text" class="form-control"  id="textFieldCpf" name="textFieldCpf" placeholder="" aria-describedby="sizing-addon2">
 					</div>
 					
 					<div class="input-group">
@@ -31,9 +31,7 @@
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">RG/RNE</span>
 	  					<input type="text" class="form-control" id = "textFieldRg" name="textFieldRg" placeholder="" aria-describedby="sizing-addon2">
-					</div>
-                                        
-                                        <div class="input-group">
+				
 	  					<span class="input-group-addon" id="sizing-addon2">Orgão emissor(RG)</span>
 	  					<input type="text" class="form-control" id = "textFieldOrgaoEmissor" name="textFieldOrgaoEmissor" placeholder="SSPBA" aria-describedby="sizing-addon2">
 					</div>
@@ -48,9 +46,7 @@
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Estado</span>
 	  					<input type="text" class="form-control" id = "textFieldEstado" name="textFieldEstado" placeholder="BA" aria-describedby="sizing-addon2">
-					</div>
-                                        
-                                        <div class="input-group">
+			
 	  					<span class="input-group-addon" id="sizing-addon2">Cidade</span>
 	  					<input type="text" class="form-control" id = "textFieldCidade" name="textFieldCidade" placeholder="" aria-describedby="sizing-addon2">
 					</div>
