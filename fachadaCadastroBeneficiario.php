@@ -1,3 +1,4 @@
+
     <?php
 
             /** 
@@ -34,8 +35,8 @@
                     echo $b;
                     noQuery($b);
     ?>
-
 <script>
+    
     window.location = "index.php"
     
 </script>
