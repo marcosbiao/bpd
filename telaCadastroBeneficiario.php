@@ -1,18 +1,8 @@
 
-<html lang="pt">
-
-
-    
+<html lang="pt">   
     
     <?php include("head.html");  ?>
-    
-    <script type="text/javascript">
-$(document).ready(function(){
-	$("input.data").mask("99/99/9999");
-        $("input.cpf").mask("999.999.999-99");
-        $("input.cep").mask("99.999-999");
-});
-</script>
+
     <body>
         
        <?php  include("cabecario.html");  ?>
@@ -47,10 +37,11 @@ $(document).ready(function(){
 					</div>
                                         
                                         <div class="input-group">
-	  					<!--<span class="input-group-addon" id="sizing-addon2">Emitido em</span> -->
+	  					<span class="input-group-addon" id="sizing-addon2">Emitido em</span>
 	  					<!--<input type="text" class="form-control" id = "textFieldEmitido" name="textFieldEmitido" placeholder="" aria-describedby="sizing-addon2"> -->
-                                                <label for="data">Data:</label>
-                                                <input type="text" class="data" id="data" name="data" />
+                                                <!--<label for="data">Data:</label> -->
+                                                <input type="date" class="date" id="data" name="data" /> 
+                                                <input autocomplete="off" maxlength="10" class="form-control" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" type="text">
                                         </div>
                                         
                                         <h5>Meu endereço</h5>
