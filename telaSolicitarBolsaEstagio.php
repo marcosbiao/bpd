@@ -3,7 +3,7 @@
     include("banco/banco.php");
     $query = "select nome from programa";
     $rs = Select ($query);
-    $row = mysql_fetch_assoc($rs);
+    $row = mysql_fetch_array($rs);
     ?>
 
     <?php include("head.html");  ?>
@@ -15,7 +15,7 @@
         <div>
             Projetos: 
             <select id="programa" name="programa">
-                <?php while($row = mysql_fetch_assoc($rs)) { 
+                <?php while($row = mysql_fetch_array($rs)) { 
                 echo "<option value= {$rs['idPrograma']} > {$rs['nome']} </option> ";
                 } ?>
             </select>
