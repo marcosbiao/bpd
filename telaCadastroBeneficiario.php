@@ -2,7 +2,17 @@
 <html lang="pt">
 
 
+    
+    
     <?php include("head.html");  ?>
+    
+    <script type="text/javascript">
+$(document).ready(function(){
+	$("input.data").mask("99/99/9999");
+        $("input.cpf").mask("999.999.999-99");
+        $("input.cep").mask("99.999-999");
+});
+</script>
     <body>
         
        <?php  include("cabecario.html");  ?>
@@ -37,10 +47,11 @@
 					</div>
                                         
                                         <div class="input-group">
-	  					<span class="input-group-addon" id="sizing-addon2">Emitido em</span>
-                                                <input type="text" id="textFieldEmitido" name="textFieldEmitido" class="form-control">
-                                               
-					</div>
+	  					<!--<span class="input-group-addon" id="sizing-addon2">Emitido em</span> -->
+	  					<!--<input type="text" class="form-control" id = "textFieldEmitido" name="textFieldEmitido" placeholder="" aria-describedby="sizing-addon2"> -->
+                                                <label for="data">Data:</label>
+                                                <input type="text" class="data" id="data" name="data" />
+                                        </div>
                                         
                                         <h5>Meu endereço</h5>
                                         
@@ -72,24 +83,6 @@
 			</form>	
 		</div>  <!-- container-->
         
-                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-                 <!-- Referência do arquivo JS do plugin após carregar o jquery -->
-                  <!-- Datepicker -->
-                  <script src="js/bootstrap-datepicker.js"></script>
-
-                <!-- Include all compiled plugins (below), or include individual files as needed -->
-                <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-                <script>
-                  $(document).ready(function () {
-                    $('#exemplo').datepicker({
-                        format: "dd/mm/yyyy",
-                        language: "pt-BR"
-                    });
-                  });
-                </script>
                 
         <?php include("script.html"); ?>
         <?php include("foot.html"); ?>

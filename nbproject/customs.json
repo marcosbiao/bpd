@@ -3,6 +3,8 @@
         "input=\"text\"": {}
     },
     "attributes": {
-        "aria-expanded": {}
+        "maxlength": {},
+        "aria-expanded": {},
+        "pattern": {}
     }
 }
