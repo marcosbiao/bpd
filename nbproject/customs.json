@@ -5,6 +5,9 @@
     "attributes": {
         "maxlength": {},
         "aria-expanded": {},
-        "pattern": {}
+        "pattern": {},
+        "placeholder": {
+            "context": "input"
+        }
     }
 }

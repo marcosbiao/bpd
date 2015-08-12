@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt">   
     
     <?php include("head.html");  ?>
@@ -6,6 +6,9 @@
     <body>
         
        <?php  include("cabecario.html");  ?>
+        <form>
+            <input type="date">
+        </form>
         
         <div class="container panel panel-default">
 			</br></br>
@@ -30,10 +33,10 @@
 					
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">RG/RNE</span>
-	  					<input type="text" class="form-control" id = "textFieldRg" name="textFieldRg" placeholder="" aria-describedby="sizing-addon2">
+                                                <input type="text" class="form-control" id = "textFieldRg" name="textFieldRg" placeholder="" aria-describedby="sizing-addon2">
 				
 	  					<span class="input-group-addon" id="sizing-addon2">Orgão emissor(RG)</span>
-	  					<input type="text" class="form-control" id = "textFieldOrgaoEmissor" name="textFieldOrgaoEmissor" placeholder="SSPBA" aria-describedby="sizing-addon2">
+                                                <input type="text" class="form-control" id = "textFieldOrgaoEmissor" name="textFieldOrgaoEmissor" placeholder="SSPBA" aria-describedby="sizing-addon2">
 					</div>
                                         
                                         <div class="input-group">
@@ -41,7 +44,6 @@
 	  					<!--<input type="text" class="form-control" id = "textFieldEmitido" name="textFieldEmitido" placeholder="" aria-describedby="sizing-addon2"> -->
                                                 <!--<label for="data">Data:</label> -->
                                                 <input type="date" class="date" id="data" name="data" /> 
-                                                <input autocomplete="off" maxlength="10" class="form-control" placeholder="Ex.: dd/mm/aaaa" data-mask="00/00/0000" type="text">
                                         </div>
                                         
                                         <h5>Meu endereço</h5>
