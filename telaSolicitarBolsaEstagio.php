@@ -7,7 +7,7 @@
     ?>
     
     <?php 
-    $query2 = "select nome from pessoa";
+    $query2 = "select nome from pessoa order by nome";
     $rs2 = Select ($query2);
     $row2 = mysql_fetch_array($rs2);
     ?>
@@ -27,14 +27,14 @@
                                             <div>
                                                 Projetos: 
                                                 <select id="programa" name="programa">
-                                                    <option value="">--- Select ---</option>
+                                                    <option value="">--- Selecione---</option>
                                                     <?php 
-                                                    $query = "select nome from programa";
+                                                    $query = "select nome from programa order by nome";
                                                     $rs = Select ($query);
                                                     $row = mysql_fetch_array($rs);
+                                                    
                                                     while($row = mysql_fetch_array($rs)) { 
-                                                        echo ("<option value= ". $rs['idPrograma'].">". $rs['nome']." </option> ");
-                                                         
+                                                        echo ("<option value= ". $row['idPrograma'].">". $row['nome']." </option> ");
                                                     } ?>
                                                     
                                                 </select>
@@ -45,10 +45,13 @@
                                             <div>
                                                 Nome: 
                                                 <select id="pessoa" name="pessoa">
-                                                    <?php while($row2 = mysql_fetch_assoc($rs2)) { 
-                                                    echo "<option value= {$rs2['cpf']} > {$rs2['nome']} </option> ";
+                                                    <option value="">--- Selecione---</option>
+                                                    <?php 
+                                                    echo "<option value= {$row2['cpf']} > {$row2['nome']} </option> ";
+                                                    while($row2 = mysql_fetch_assoc($rs2)) { 
+                                                        echo "<option value= {$row2['cpf']} > {$row2['nome']} </option> ";
                                                     } ?>
-                                                </select>
+                                                </select>   
                                             </div>
                                         </center>
                                         
