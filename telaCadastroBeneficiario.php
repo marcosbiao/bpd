@@ -6,9 +6,7 @@
     <body>
         
        <?php  include("cabecario.html");  ?>
-        <form>
-            <input type="date">
-        </form>
+      
         
         <div class="container panel panel-default">
 			</br></br>
@@ -43,7 +41,7 @@
 	  					<span class="input-group-addon" id="sizing-addon2">Emitido em</span>
 	  					<!--<input type="text" class="form-control" id = "textFieldEmitido" name="textFieldEmitido" placeholder="" aria-describedby="sizing-addon2"> -->
                                                 <!--<label for="data">Data:</label> -->
-                                                <input type="date" class="date" id="data" name="data" /> 
+                                                <input type="date" class="date" id="textFieldEmitido" name="textFieldEmitido" /> 
                                         </div>
                                         
                                         <h5>Meu endereço</h5>

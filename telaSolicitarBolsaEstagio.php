@@ -32,7 +32,7 @@
                                                     $query = "select nome from programa order by nome";
                                                     $rs = Select ($query);
                                                     $row = mysql_fetch_array($rs);
-                                                    
+                                                    echo ("<option value= ". $row['idPrograma'].">". $row['nome']." </option> ");
                                                     while($row = mysql_fetch_array($rs)) { 
                                                         echo ("<option value= ". $row['idPrograma'].">". $row['nome']." </option> ");
                                                     } ?>

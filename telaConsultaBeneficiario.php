@@ -2,7 +2,7 @@
     
     <?php 
     include("banco/banco.php");
-    $query = "Select nome,email,nascimento,cpf,rg from pessoa";
+    $query = "Select nome,email,nascimento,cpf,rg from pessoa order by nome";
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
@@ -31,7 +31,15 @@
           </tr>
       </thead>
       <tbody>
-          <?php while($row = mysql_fetch_array($rs)){
+          <?php 
+          echo '<tr>';   
+              echo"<td>".$row['nome']."</td>" ; 
+              echo"<td>".$row['email']."</td>" ;
+              echo"<td>".$row['nascimento']."</td>" ;
+              echo"<td>".$row['cpf']."</td>" ;
+              echo"<td>".$row['rg']."</td>" ;
+              echo "</tr>";
+          while($row = mysql_fetch_array($rs)){
               echo '<tr>';   
               echo"<td>".$row['nome']."</td>" ; 
               echo"<td>".$row['email']."</td>" ;
