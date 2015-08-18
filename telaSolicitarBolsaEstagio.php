@@ -19,7 +19,7 @@
     
         <div class="container panel panel-default">
 			</br></br>
-                        <form action = "fachadaCadastrarPrograma.php" method = "POST">
+                        <form action = "fachadaSolicitarBolsaEstagio.php" method = "POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
         
@@ -91,13 +91,14 @@
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Local do estagio</span>
-	  					<input type="text" class="form-control" id = "nomeSupervisor" name="nomeSupervisor" aria-describedby="sizing-addon2">
+	  					<input type="text" class="form-control" id = "localEstagio" name="localEstagio" aria-describedby="sizing-addon2">
                                         </div>
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Atividades a serem desenvolvidas no local</span>
                                                 <input type="text" class="form-control" id = "atividadeLocal" name="atividadeLocal"  aria-describedby="sizing-addon2">
                                         </div>
+                                        <input type="submit" id = "submit" class="btn btn-default topElementos" value="Salvar" />
                                 </div>
                         </form>
         </div>

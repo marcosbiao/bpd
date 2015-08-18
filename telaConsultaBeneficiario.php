@@ -14,13 +14,13 @@
         
         <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
+  
   <div class="panel-body">
    <!-- <p> ... </p>    -->
   </div>
   <!-- Table -->
   <table class="table table-striped table-bordered table-condensed"> 
-      <caption>Consulta de Beneficiario</caption>
+      <!--<caption>Consulta de Beneficiario</caption> -->
       <thead>
           <tr>
             <th>Nome</th>  
