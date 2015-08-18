@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 13-Ago-2015 às 22:01
+-- Generation Time: 18-Ago-2015 às 22:14
 -- Versão do servidor: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -40,7 +40,15 @@ CREATE TABLE IF NOT EXISTS `bolsaestagio` (
   `valorAuxilioTrasporte` double NOT NULL,
   `localEstagio` varchar(45) COLLATE utf8_bin NOT NULL,
   `atividades` varchar(250) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Extraindo dados da tabela `bolsaestagio`
+--
+
+INSERT INTO `bolsaestagio` (`idbolsaEstagio`, `pessoa_cpf`, `idPrograma`, `nomeInstituicao`, `curso`, `supervisorEstagio`, `dataInicio`, `dataFim`, `cargaHoraria`, `valorBolsa`, `valorAuxilioTrasporte`, `localEstagio`, `atividades`) VALUES
+(1, 4294967295, 6, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd'),
+(2, 215478, 3, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd');
 
 -- --------------------------------------------------------
 
@@ -143,7 +151,7 @@ INSERT INTO `pessoa` (`cpf`, `nome`, `nascimento`, `email`, `rg`, `orgaoEmissor`
 CREATE TABLE IF NOT EXISTS `programa` (
 `idPrograma` int(11) NOT NULL,
   `nome` varchar(45) COLLATE utf8_bin DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `programa`
@@ -154,7 +162,7 @@ INSERT INTO `programa` (`idPrograma`, `nome`) VALUES
 (2, 'Pac'),
 (3, 'PACC'),
 (4, 'Unasus'),
-(5, '');
+(6, 'Novo programa');
 
 --
 -- Indexes for dumped tables
@@ -204,7 +212,7 @@ ALTER TABLE `programa`
 -- AUTO_INCREMENT for table `bolsaestagio`
 --
 ALTER TABLE `bolsaestagio`
-MODIFY `idbolsaEstagio` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `idbolsaEstagio` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `bolsapesquisa`
 --
@@ -224,7 +232,7 @@ MODIFY `idpassagem` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `programa`
 --
 ALTER TABLE `programa`
-MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
