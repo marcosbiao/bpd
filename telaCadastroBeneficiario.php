@@ -4,7 +4,6 @@
     <?php include("head.html");  ?>
 
     <body>
-        
        <?php  include("cabecario.html");  ?>
       
         

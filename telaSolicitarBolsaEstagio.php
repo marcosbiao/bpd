@@ -1,13 +1,13 @@
 <html lang="pt">
     <?php 
     include("banco/banco.php");
-    $query = "select nome from programa";
-    $rs = Select ($query);
-    $row = mysql_fetch_array($rs);
+//    $query = "select nome from programa";
+//    $rs = Select ($query);
+//    $row = mysql_fetch_array($rs);
     ?>
     
     <?php 
-    $query2 = "select nome from pessoa order by nome";
+    $query2 = "select * from pessoa order by nome";
     $rs2 = Select ($query2);
     $row2 = mysql_fetch_array($rs2);
     ?>
@@ -24,12 +24,12 @@
 					<div id="vpav"></div>
         
                                         <center>
-                                            <div>
-                                                Projetos: 
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="sizing-addon2">Projetos</span> 
                                                 <select id="programa" name="programa">
                                                     <option value="">--- Selecione---</option>
                                                     <?php 
-                                                    $query = "select nome from programa order by nome";
+                                                    $query = "select * from programa order by nome";
                                                     $rs = Select ($query);
                                                     $row = mysql_fetch_array($rs);
                                                     echo ("<option value= ". $row['idPrograma'].">". $row['nome']." </option> ");
@@ -41,19 +41,21 @@
                                             </div>
                                         </center>
 
-                                        <center>
-                                            <div>
-                                                Nome: 
+                                        
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="sizing-addon2">Nome</span> 
                                                 <select id="pessoa" name="pessoa">
                                                     <option value="">--- Selecione---</option>
                                                     <?php 
-                                                    echo "<option value= {$row2['cpf']} > {$row2['nome']} </option> ";
+                                                    echo "<option value=' {$row2['cpf']} '> {$row2['nome']} </option> ";                                                                                                        
+                                                    
                                                     while($row2 = mysql_fetch_assoc($rs2)) { 
-                                                        echo "<option value= {$row2['cpf']} > {$row2['nome']} </option> ";
+                                                        echo "<option value=' {$row2['cpf']} '> {$row2['nome']} </option> ";
                                                     } ?>
-                                                </select>   
+                                                </select>                                                                                                 
+                                               
                                             </div>
-                                        </center>
+                                         
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Nome da instituição</span>
@@ -82,7 +84,7 @@
                                                 <option value="30">30h</option>
                                             </select>
                                             <span class="input-group-addon" id="sizing-addon2">Valor Mensal da bolsa</span>
-                                            <input type="tel" required="required" maxlength="15" class="form-control" id = "valorBolsa" name="valorBolsa" aria-describedby="sizing-addon2" pattern="([0-9]{1,3}\.)?[0-9]{1,3},[0-9]{2}$">
+                                            <input type="number" required="required"  class="form-control" id = "valorBolsa" name="valorBolsa" aria-describedby="sizing-addon2">
                                             
                                             <span class="input-group-addon" id="sizing-addon2">Valor Auxilio-transporte</span>
                                             <input type="number" class="form-control" id = "valorAuxilioTrasporte" name="valorAuxilioTrasporte" aria-describedby="sizing-addon2">
