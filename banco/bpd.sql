@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Ago-2015 às 22:14
+-- Generation Time: 20-Ago-2015 às 16:22
 -- Versão do servidor: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -39,16 +39,17 @@ CREATE TABLE IF NOT EXISTS `bolsaestagio` (
   `valorBolsa` double NOT NULL,
   `valorAuxilioTrasporte` double NOT NULL,
   `localEstagio` varchar(45) COLLATE utf8_bin NOT NULL,
-  `atividades` varchar(250) COLLATE utf8_bin NOT NULL
+  `atividades` varchar(250) COLLATE utf8_bin NOT NULL,
+  `autorizado` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `bolsaestagio`
 --
 
-INSERT INTO `bolsaestagio` (`idbolsaEstagio`, `pessoa_cpf`, `idPrograma`, `nomeInstituicao`, `curso`, `supervisorEstagio`, `dataInicio`, `dataFim`, `cargaHoraria`, `valorBolsa`, `valorAuxilioTrasporte`, `localEstagio`, `atividades`) VALUES
-(1, 4294967295, 6, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd'),
-(2, 215478, 3, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd');
+INSERT INTO `bolsaestagio` (`idbolsaEstagio`, `pessoa_cpf`, `idPrograma`, `nomeInstituicao`, `curso`, `supervisorEstagio`, `dataInicio`, `dataFim`, `cargaHoraria`, `valorBolsa`, `valorAuxilioTrasporte`, `localEstagio`, `atividades`, `autorizado`) VALUES
+(1, 4294967295, 6, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd', 0),
+(2, 215478, 3, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd', 0);
 
 -- --------------------------------------------------------
 
@@ -164,6 +165,27 @@ INSERT INTO `programa` (`idPrograma`, `nome`) VALUES
 (4, 'Unasus'),
 (6, 'Novo programa');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+`idUsuario` int(11) NOT NULL,
+  `nome` varchar(45) COLLATE utf8_bin NOT NULL,
+  `senha` varchar(45) COLLATE utf8_bin NOT NULL,
+  `nivel` int(11) NOT NULL,
+  `ativo` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`idUsuario`, `nome`, `senha`, `nivel`, `ativo`) VALUES
+(1, 'root', 'root', 0, 1);
+
 --
 -- Indexes for dumped tables
 --
@@ -205,6 +227,12 @@ ALTER TABLE `programa`
  ADD PRIMARY KEY (`idPrograma`);
 
 --
+-- Indexes for table `usuario`
+--
+ALTER TABLE `usuario`
+ ADD PRIMARY KEY (`idUsuario`), ADD KEY `nome` (`nome`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -233,6 +261,11 @@ MODIFY `idpassagem` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 ALTER TABLE `programa`
 MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
