@@ -12,9 +12,9 @@
     $row2 = mysql_fetch_array($rs2);
     ?>
 
-    <?php include("head.html");  ?>
+    <?php include("head.php");  ?>
     <body>
-       <?php  include("cabecario.html");  ?>
+       <?php  include("escolheCabecario.php");  ?>
         <h3>Solicitação de Estagio</h3>
     
         <div class="container panel panel-default">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">   
     
-    <?php include("head.html");  ?>
+    <?php include("head.php");  ?>
 
     <body>
-       <?php  include("cabecario.html");  ?>
+       <?php include("escolheCabecario.php");?>
       
         
         <div class="container panel panel-default">

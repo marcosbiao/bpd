@@ -6,10 +6,10 @@
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
-    <?php include("head.html");  ?>
+    <?php include("head.php");  ?>
     
     <body>
-        <?php include("cabecario.html"); ?>
+        <?php include("escolheCabecario.php"); ?>
         <h3>Consulta de Beneficiario</h3>
         
         <div class="panel panel-default">
