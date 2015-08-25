@@ -9,7 +9,7 @@
     $senha = mysql_real_escape_string($_POST['senha']);
 
     $sql = ("SELECT * FROM usuario WHERE (login = '". $login ."') AND (senha = '". $senha ."') AND (ativo = 1) LIMIT 1;") or die(mysql_error());
-    echo $sql;
+    //echo $sql;
     $query = Select($sql);
     if (mysql_num_rows($query) != 1) {
         // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
