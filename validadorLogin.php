@@ -1,8 +1,8 @@
 
 <?php include("banco/banco.php"); 
     if (!empty($_POST) AND (empty($_POST['login']) OR empty($_POST['senha']))) {
-        echo "erro";
-        header("Location: login.php"); exit;
+        header("Location: index.php");    
+        exit;
     }
     
     $login = mysql_real_escape_string($_POST['login']);

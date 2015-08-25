@@ -5,7 +5,7 @@
 
     <body>
         <center> <img src="imagem/seadUfrb.png" width="700" height="300"> </center>
-        <div>
+        <div class="container panel panel-default">
             <form action="validadorLogin.php" method="POST">
                 <center>
                     <div>
@@ -22,6 +22,8 @@
                 </center>
             </form>
         </div>
+        <?php include("script.html"); ?>
+        <?php include("foot.html"); ?>
     </body>
     
 </html>
