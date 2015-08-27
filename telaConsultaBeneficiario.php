@@ -52,20 +52,7 @@
       </tbody>
   </table>
 </div>
-        <div>
-            <form action="validaBolsaEstagio.php" method="POST">
-                <center>
-                        <div>
-                            <label>Digite o codigo que deseja validar</label>
-                            <input type="text" name="idbolsaEstagio" id="idbolsaEstagio">
-                        </div>
-
-                        <div>
-                            <input type="submit" value="Login">
-                        </div>
-                    </center>
-            </form>
-        </div>
+        
         
         <?php include("script.html"); ?>
         <?php include("foot.html"); ?>

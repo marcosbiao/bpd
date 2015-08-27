@@ -55,7 +55,33 @@
       </tbody>
   </table>
 </div>
-      
+    <div>
+            <form action="fachadaValidaBolsaEstagio.php" method="POST">
+                <center>
+                        <div>
+                            <label>Digite o codigo que deseja validar</label>
+                            <input type="text" name="idbolsaEstagio" id="idbolsaEstagio">
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Validar">
+                        </div>
+                    </center>
+            </form>
+        
+        <form action="fachadaNaoValidaBolsaEstagio.php" method="POST">
+                    <center>
+                            <div>
+                                <label>Digite o codigo que deseja não validar</label>
+                                <input type="text" name="idbolsaEstagio" id="idbolsaEstagio">
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Não validar">
+                            </div>
+                        </center>
+                </form>
+        </div>
     <?php include("script.html"); ?>
     <?php include("foot.html"); ?>
   </body>
