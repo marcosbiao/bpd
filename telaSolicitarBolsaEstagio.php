@@ -84,10 +84,10 @@
                                                 <option value="30">30h</option>
                                             </select>
                                             <span class="input-group-addon" id="sizing-addon2">Valor Mensal da bolsa</span>
-                                            <input type="number" required="required"  class="form-control" id = "valorBolsa" name="valorBolsa" aria-describedby="sizing-addon2">
+                                            <input type="text" pattern="[0-9]+$" required="required"  class="form-control" id = "valorBolsa" name="valorBolsa" aria-describedby="sizing-addon2">
                                             
                                             <span class="input-group-addon" id="sizing-addon2">Valor Auxilio-transporte</span>
-                                            <input type="number" class="form-control" id = "valorAuxilioTrasporte" name="valorAuxilioTrasporte" aria-describedby="sizing-addon2">
+                                            <input type="text" pattern="[0-9]+$" class="form-control" id = "valorAuxilioTrasporte" name="valorAuxilioTrasporte" aria-describedby="sizing-addon2">
                                         
                                         </div>
                                         

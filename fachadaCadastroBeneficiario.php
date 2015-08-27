@@ -1,6 +1,6 @@
 
     <?php
-
+            
             /** 
                     LEMBRAR DE MUDAR OS PARAMETROS DO BANCO DE DADOS, USER E SENHA.
             */
@@ -27,16 +27,27 @@
                     $bairro = trim($_POST["textFieldBairro"]);
                     $cep = trim($_POST["textFieldCep"]);
                     $endereco = trim($_POST["textFieldEndereco"]);
+                    $contato = trim($_POST["textFieldContato"]);
+                    $pis = trim($_POST["textFieldPis"]);
+                    $inscrisaoMunicipal = trim($_POST["textFieldInscrisaoMunicipal"]);
+                    $escolaridade = trim($_POST["escolaridade"]);
+                    $profissao = trim($_POST["textFieldProfissao"]);
+                    $codBanco = trim($_POST["textFieldCodBanco"]);
+                    $nomeBanco = trim($_POST["textFieldBanco"]);
+                    $agencia = trim($_POST["textFieldAgencia"]);
+                    $conta = trim($_POST["textFieldConta"]);
+                    $tipoConta = trim($_POST["tipo"]);
 
 
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO pessoa (cpf,nome,email,rg,orgaoEmissor,dataEmissaoRg,estado,cidade,bairro,cep,endereco) VALUES "
-                            . "($cpf,'$nome','$email',$rg,'$orgaoEmissor',$dataEmissaoRg,'$estado','$cidade','$bairro',$cep,'$endereco')";
-                    echo $b;
+                    $b = "INSERT INTO pessoa (cpf,nome,email,rg,orgaoEmissor,dataEmissaoRg,estado,cidade,bairro,cep,endereco,contato,numeroPis,inscricaoMunicipal,escolaridade,profissao,codBanco,nomeBanco,agencia,conta,tipoConta) VALUES "
+                            . "($cpf,'$nome','$email',$rg,'$orgaoEmissor',$dataEmissaoRg,'$estado','$cidade','$bairro',$cep,'$endereco','$contato',$pis,$inscrisaoMunicipal,'$escolaridade','$profissao',$codBanco,'$nomeBanco','$agencia','$conta','$tipoConta')";
+                    //echo $b;
                     noQuery($b);
     ?>
+
 <script>
     
-    window.location = "index.php"
+    window.location = "telaPrincipal.php"
     
 </script>
