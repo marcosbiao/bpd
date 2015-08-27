@@ -9,5 +9,7 @@
         case 2:
             include("cabecarioCoordenador.html");
             break;
+        default :
+            header("Location: index.php"); exit;
     }
     ?>
