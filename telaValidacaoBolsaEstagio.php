@@ -2,7 +2,7 @@
 <html lang="pt">
 <?php 
     include("banco/banco.php");
-    $query = "SELECT `idbolsaEstagio`, `pessoa_cpf`, `idPrograma`, `cargaHoraria`, `valorBolsa`, `autorizado` FROM `bolsaestagio` where `autorizado`=0";
+    $query = "SELECT be.idbolsaEstagio, be.pessoa_cpf, p.nome, be.cargaHoraria, be.valorBolsa, be.autorizado FROM bolsaestagio be join programa p on be.programa_idPrograma = p.idPrograma where be.autorizado=0";
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
@@ -36,7 +36,7 @@
           echo '<tr>';   
               echo"<td>".$row['idbolsaEstagio']."</td>" ; 
               echo"<td>".$row['pessoa_cpf']."</td>" ;
-              echo"<td>".$row['idPrograma']."</td>" ;
+              echo"<td>".$row['nome']."</td>" ;
               echo"<td>".$row['cargaHoraria']."</td>" ;
               echo"<td>".$row['valorBolsa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
@@ -45,7 +45,7 @@
               echo '<tr>';   
               echo"<td>".$row['idbolsaEstagio']."</td>" ; 
               echo"<td>".$row['pessoa_cpf']."</td>" ;
-              echo"<td>".$row['idPrograma']."</td>" ;
+              echo"<td>".$row['nome']."</td>" ;
               echo"<td>".$row['cargaHoraria']."</td>" ;
               echo"<td>".$row['valorBolsa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
