@@ -29,6 +29,6 @@
     ?>
 <script>
     
-    //window.location = "telaPrincipal.php"
+    window.location = "telaPrincipal.php"
     
 </script>
