@@ -33,7 +33,7 @@
                     $atividadeLocal = trim($_POST["atividadeLocal"]);
                     // chamando a função query da classe banco para adicionar ao banco de dados
                         $b = "INSERT INTO bolsaestagio (pessoa_cpf,programa_idPrograma,nomeInstituicao,curso,supervisorEstagio,dataInicio,dataFim,cargaHoraria,valorBolsa,valorAuxilioTrasporte,localEstagio,atividades) VALUES "
-                            . "($pessoaCpf,$idPrograma,'$nomeInstituicao','$nomeCurso','$nomeSupervisor',$dataInicio,$dataFim,$cargaHoraria,$valorBolsa,$valorAuxilioTrasporte,'$localEstagio','$atividadeLocal')";
+                            . "($pessoaCpf,$idPrograma,'$nomeInstituicao','$nomeCurso','$nomeSupervisor','$dataInicio','$dataFim',$cargaHoraria,$valorBolsa,$valorAuxilioTrasporte,'$localEstagio','$atividadeLocal')";
                     echo $b;
                     noQuery($b);
     ?>

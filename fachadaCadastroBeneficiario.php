@@ -41,7 +41,7 @@
 
                     // chamando a função query da classe banco para adicionar ao banco de dados
                     $b = "INSERT INTO pessoa (cpf,nome,email,rg,orgaoEmissor,dataEmissaoRg,estado,cidade,bairro,cep,endereco,contato,numeroPis,inscricaoMunicipal,escolaridade,profissao,codBanco,nomeBanco,agencia,conta,tipoConta) VALUES "
-                            . "($cpf,'$nome','$email',$rg,'$orgaoEmissor',$dataEmissaoRg,'$estado','$cidade','$bairro',$cep,'$endereco','$contato',$pis,$inscrisaoMunicipal,'$escolaridade','$profissao',$codBanco,'$nomeBanco','$agencia','$conta','$tipoConta')";
+                            . "($cpf,'$nome','$email',$rg,'$orgaoEmissor','$dataEmissaoRg','$estado','$cidade','$bairro',$cep,'$endereco','$contato',$pis,$inscrisaoMunicipal,'$escolaridade','$profissao',$codBanco,'$nomeBanco','$agencia','$conta','$tipoConta')";
                     //echo $b;
                     noQuery($b);
     ?>
