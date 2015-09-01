@@ -73,9 +73,9 @@
                                         Dados do estagio:
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Periodo de virgencia</span>
-                                                <input type="date" class="form-control" id = "dataInicio" name="dataInicio" aria-describedby="sizing-addon2">
+                                                <input type="date" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataInicio" name="dataInicio">
                                                 à
-                                                <input type="date" class="form-control" id = "dataFim" name="dataFim" aria-describedby="sizing-addon2">
+                                                <input type="date" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataFim" name="dataFim">
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="sizing-addon2">Carga Horaria</span>

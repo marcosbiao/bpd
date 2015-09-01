@@ -40,7 +40,7 @@
 	  					<span class="input-group-addon" id="sizing-addon2">Emitido em</span>
 	  					<!--<input type="text" class="form-control" id = "textFieldEmitido" name="textFieldEmitido" placeholder="" aria-describedby="sizing-addon2"> -->
                                                 <!--<label for="data">Data:</label> -->
-                                                <input type="date" class="date" id="textFieldEmitido" name="textFieldEmitido" /> 
+                                                <input type="date" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id="textFieldEmitido" name="textFieldEmitido" /> 
                                         </div>
                                         
                                         <h5>Meu endereço</h5>

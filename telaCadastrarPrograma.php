@@ -15,6 +15,11 @@
 	  					<span class="input-group-addon" id="sizing-addon2">Nome</span>
 	  					<input type="text" class="form-control"  id="textFieldCpf" name="textFieldNome" placeholder="Digite o nome do programa" aria-describedby="sizing-addon2">
 					</div>
+                                        
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Data</span>
+                                                <input type="date" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" name="textFieldData"/>
+					</div>
                                         <div>
                                             <input type="submit" id = "bm" class="btn btn-default topElementos" value="Salvar" />
                                         </div>
