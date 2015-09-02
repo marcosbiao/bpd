@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Set-2015 às 15:39
+-- Generation Time: 02-Set-2015 às 21:51
 -- Versão do servidor: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -41,17 +41,17 @@ CREATE TABLE IF NOT EXISTS `bolsaestagio` (
   `autorizado` int(11) NOT NULL,
   `pessoa_cpf` int(10) unsigned NOT NULL,
   `programa_idPrograma` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `bolsaestagio`
 --
 
 INSERT INTO `bolsaestagio` (`idbolsaEstagio`, `nomeInstituicao`, `curso`, `supervisorEstagio`, `dataInicio`, `dataFim`, `cargaHoraria`, `valorBolsa`, `valorAuxilioTrasporte`, `localEstagio`, `atividades`, `autorizado`, `pessoa_cpf`, `programa_idPrograma`) VALUES
-(1, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd', 0, 4294967295, 0),
-(2, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd', 2, 215478, 0),
-(3, 'UFRB', 'Educação fisica', 'FAMAM', '2124-02-15', '0000-00-00', 20, 654, 12, 'SEAD', 'jiofdghfjkd', 0, 215478, 1),
-(4, 'UFRB', 'Educação fisica', 'FAMAM', '2124-02-15', '0000-00-00', 20, 100, 100, 'fdgfg', 'jiofdghfjkd', 0, 215478, 3);
+(1, 'UFRB', 'Educa', 'FAMAM', '2124-02-15', '0000-00-00', 20, 600, 200, 'SEAD', 'jiofdghfjkd', 1, 4294967295, 1),
+(6, 'UFRB', 'Educação fisica', 'SEAD', '0000-00-00', '0000-00-00', 20, 500, 500, 'SEAD', 'sxasxasxasxasxasx', 1, 4294967295, 1),
+(7, 'UFRB', 'Eng. Computação', 'Leo', '2015-07-10', '2016-07-10', 20, 500, 500, 'SEAD', 'sxasxasxasxasxasx', 2, 2864254562, 52),
+(8, 'UFRB', 'Eng. Computação', 'SEAD', '2015-03-01', '2016-03-01', 30, 650, 200, 'SEAD', 'lalala', 1, 2864254562, 53);
 
 -- --------------------------------------------------------
 
@@ -141,10 +141,7 @@ CREATE TABLE IF NOT EXISTS `pessoa` (
 --
 
 INSERT INTO `pessoa` (`cpf`, `nome`, `nascimento`, `email`, `rg`, `orgaoEmissor`, `dataEmissaoRg`, `nacionalidade`, `naturalidade`, `contato`, `servidorPublico`, `numeroPis`, `inscricaoMunicipal`, `codBanco`, `nomeBanco`, `tipoConta`, `enderecoBrasil`, `estado`, `cidade`, `bairro`, `cep`, `endereco`, `escolaridade`, `profissao`, `agencia`, `conta`) VALUES
-(215478, 'Luana', '0000-00-00', 'luanasantos@hotmail.com', 435435, 'sspba', '0000-00-00', '', '', '', NULL, NULL, NULL, 0, 0, '', 0, 'ba', 'cruz das almas', 'analucia', 44380000, 'manoel pedro da silveira', '', NULL, '', ''),
-(56546542, 'COMFOR', '0000-00-00', 'hfvjidbv', 212344, 'sdfsdf', '0000-00-00', '', '', '75 9754-6251', NULL, 4294967295, 465465465, 1225, 0, 'Corrente', 0, 'ba', 'fdgfdg', 'dfgfdg', 2355, 'jhfiruehfu iuhwefui hweu', 'Pós-Doutorado', 'Professor', '', ''),
-(548745787, 'Novo usuario', '0000-00-00', 'jdsfbhhjfbj@hotmail.com', 215487541, 'sspba', '0000-00-00', '', '', '', NULL, NULL, NULL, 0, 0, '', 0, 'ba', 'feira', 'cidade nova', 44775, 'rua tal numero 1', '', NULL, '', ''),
-(2824654562, 'Marcos', '0000-00-00', 'luanasantos@hotmail.com', 43535, 'sspba', '0000-00-00', '', '', '75 9754-6251', NULL, 4294967295, 465465465, 1245, 0, 'Corrente', 0, 'ba', 'cruz das almas', 'analucia', 6545465, 'manoel pedro da silveira', 'Superior completo', 'Professor', '1254-8', '21547-9'),
+(123456789, 'Marcos Bião', '0000-00-00', 'marcosbiao@hotmail.com', 998547821, 'sspba', '2010-02-04', '', '', '75 6584-9854', NULL, 654654, 654654, 124, 0, 'Corrente', 0, 'ba', 'cruz das almas', 'ana lucia', 44380000, 'rua tal e coisa', 'Superior completo', 'Professor', '125-8', '21548-9'),
 (2864254562, 'Marcos Bião', '0000-00-00', 'marcosbiao@yahoo.com.br', 622545855, 'sspba', '0000-00-00', '', '', '', NULL, NULL, NULL, 0, 0, '', 0, 'ba', 'cruz das almas', 'analucia', 44380000, 'jiehfjidh defhsd fsd', '', NULL, '', ''),
 (4294967295, 'Marcos', '0000-00-00', 'hfvjidbv', 4534543, 'sspba', '0000-00-00', '', '', '75 9754-6251', NULL, 4294967295, 465465465, 1245, 0, 'Poupança', 0, 'zbvc', 'cruz das almas', 'uihuihui', 44380000, 'jhfiruehfu', 'Doutor', 'Professor', '1254-8', '21547-9');
 
@@ -156,19 +153,18 @@ INSERT INTO `pessoa` (`cpf`, `nome`, `nascimento`, `email`, `rg`, `orgaoEmissor`
 
 CREATE TABLE IF NOT EXISTS `programa` (
 `idPrograma` int(11) NOT NULL,
-  `nome` varchar(45) COLLATE utf8_bin DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `nome` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `data` date DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `programa`
 --
 
-INSERT INTO `programa` (`idPrograma`, `nome`) VALUES
-(1, 'COMFOR'),
-(2, 'Pac'),
-(3, 'PACC'),
-(4, 'Unasus'),
-(6, 'Novo programa');
+INSERT INTO `programa` (`idPrograma`, `nome`, `data`) VALUES
+(1, 'COMFOR', NULL),
+(52, 'mais novo', '2015-02-05'),
+(53, 'erretre', '2015-02-09');
 
 -- --------------------------------------------------------
 
@@ -182,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(45) COLLATE utf8_bin NOT NULL,
   `nivel` int(11) NOT NULL,
   `ativo` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -247,7 +243,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `bolsaestagio`
 --
 ALTER TABLE `bolsaestagio`
-MODIFY `idbolsaEstagio` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `idbolsaEstagio` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `bolsapesquisa`
 --
@@ -267,12 +263,12 @@ MODIFY `idpassagem` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `programa`
 --
 ALTER TABLE `programa`
-MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=60;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --
