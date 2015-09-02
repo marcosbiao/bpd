@@ -6,6 +6,9 @@
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
+ <?php
+ 
+ ?>
     <?php include("head.php"); ?>
      
   <body>
@@ -14,24 +17,27 @@
       
     <div class="container panel panel-default">
 			</br></br>
-                        <form action = "#.php" method = "POST">
+                        <form action = "fachadaAlterarUsuario.php" method="POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
 					<h3>Cadastro Usuario</h3>
-                                        <select name="idUsuario" onchange="">
+                                        <span class="input-group-addon" id="sizing-addon2">Selecione o usuario</span>
+                                        <select name="idUsuario">
                                             <option value="">--- Selecione ---</option>
-                                            <?php while($row = mysql_fetch_array($rs)){
-                                               echo "<option value=".$row['idUsuario'].">".$row['login']   ."</option>" ;
+                                            <?php
+                                               echo "<option value=".$row['idUsuario'].">".$row['login']."</option>" ;
+                                               while($row = mysql_fetch_array($rs)){
+                                               echo "<option value=".$row['idUsuario'].">".$row['login']."</option>" ;
                                             } ?>
                                         </select>
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Login</span>
-	  					<input type="text" class="form-control"  id="textFieldLogin" name="textFieldLogin" placeholder="Digite o nome do programa" aria-describedby="sizing-addon2">
+	  					<input type="text" class="form-control"  id="textFieldLogin" name="textFieldLogin" placeholder="Digite o novo nome do usuario" aria-describedby="sizing-addon2">
 					</div>
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Senha</span>
-	  					<input type="text" class="form-control"  id="textFieldSenha" name="textFieldSenha" placeholder="Digite o nome do programa" aria-describedby="sizing-addon2">
+	  					<input type="text" class="form-control"  id="textFieldSenha" name="textFieldSenha" placeholder="Digite a nova senha do usuario" aria-describedby="sizing-addon2">
 					</div>
                                         <div>
                                             <input type="submit" id = "bm" class="btn btn-default topElementos" value="Salvar" />
