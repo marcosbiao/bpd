@@ -10,8 +10,9 @@
     
     <body>
         <?php include("escolheCabecario.php"); ?>
-        <h3>Consulta de Beneficiario</h3>
         
+        
+        <div class="container panel panel-default">
         <div class="panel panel-default">
   <!-- Default panel contents -->
   
@@ -20,12 +21,11 @@
   </div>
   <!-- Table -->
   <table class="table table-striped table-bordered table-condensed"> 
-      <!--<caption>Consulta de Beneficiario</caption> -->
+      <caption>Consulta de Beneficiario</caption>
       <thead>
           <tr>
             <th>Nome</th>  
             <th>Email</th>
-            <th>Nascimento</th>
             <th>Cpf/Passaporte</th>
             <th>RG</th>
           </tr>
@@ -35,7 +35,6 @@
           echo '<tr>';   
               echo"<td>".$row['nome']."</td>" ; 
               echo"<td>".$row['email']."</td>" ;
-              echo"<td>".$row['nascimento']."</td>" ;
               echo"<td>".$row['cpf']."</td>" ;
               echo"<td>".$row['rg']."</td>" ;
               echo "</tr>";
@@ -43,7 +42,6 @@
               echo '<tr>';   
               echo"<td>".$row['nome']."</td>" ; 
               echo"<td>".$row['email']."</td>" ;
-              echo"<td>".$row['nascimento']."</td>" ;
               echo"<td>".$row['cpf']."</td>" ;
               echo"<td>".$row['rg']."</td>" ;
               echo "</tr>";
@@ -52,6 +50,7 @@
       </tbody>
   </table>
 </div>
+        </div>
         
         
         <?php include("script.html"); ?>

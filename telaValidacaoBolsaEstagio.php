@@ -60,7 +60,7 @@
                 <center>
                         <div>
                             <label>Digite o codigo que deseja validar</label>
-                            <input type="text" name="idbolsaEstagio" id="idbolsaEstagio">
+                            <input type="text" name="idbolsaEstagio" id="idbolsaEstagio" required="required">
                         </div>
 
                         <div>
@@ -73,7 +73,7 @@
                     <center>
                             <div>
                                 <label>Digite o codigo que deseja não validar</label>
-                                <input type="text" name="idbolsaEstagio" id="idbolsaEstagio">
+                                <input type="text" name="idbolsaEstagio" id="idbolsaEstagio" required="required">
                             </div>
 
                             <div>

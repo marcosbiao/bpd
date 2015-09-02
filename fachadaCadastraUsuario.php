@@ -13,8 +13,8 @@
                     //$data2 = explode("-" or "/" or "." ,$data); 
                     //$data = implode("",$data2);
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO usuario (login,senha,nivel) VALUES ('$login','$senha',$nivel)";
-                    echo $b;
+                    $b = "INSERT INTO usuario (login,senha,nivel,ativo) VALUES ('$login','$senha',$nivel,1)";
+                    //echo $b;
                     noQuery($b);
 ?>
 

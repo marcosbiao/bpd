@@ -15,17 +15,17 @@
 					<h3>Dados obrigatorios</h3>
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Login</span>
-	  					<input type="text" class="form-control"  id="textFieldLogin" name="textFieldLogin" placeholder="Digite o login do usuario" aria-describedby="sizing-addon2">
+	  					<input type="text" required="required" class="form-control"  id="textFieldLogin" name="textFieldLogin" placeholder="Digite o login do usuario" aria-describedby="sizing-addon2">
 					</div>
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Senha</span>
-	  					<input type="text" class="form-control"  id="textFieldSenha" name="textFieldSenha" placeholder="Digite a senha do usuario" aria-describedby="sizing-addon2">
+	  					<input type="text" required="required" class="form-control"  id="textFieldSenha" name="textFieldSenha" placeholder="Digite a senha do usuario" aria-describedby="sizing-addon2">
 					</div>
                                         
                                          <div class="input-group">
                                             <span class="input-group-addon" id="sizing-addon2">Carga Horaria</span>
-                                            <select id="nivel" name="nivel">
+                                            <select id="nivel" name="nivel" required="required">
                                                 <option value="">---- Selecione ----</option>
                                                 <option value="1">Administrador Geral</option>
                                                 <option value="2">Coordenador de Curso</option>

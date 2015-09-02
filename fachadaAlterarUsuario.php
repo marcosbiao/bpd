@@ -15,7 +15,7 @@
                     //$data = implode("",$data2);
                     // chamando a função query da classe banco para adicionar ao banco de dados
                     $b = "update usuario set login= '$login', senha='$senha' where idUsuario = $idUsuario";
-                    echo $b;
+                    //echo $b;
                     noQuery($b);
     ?>
 <script>

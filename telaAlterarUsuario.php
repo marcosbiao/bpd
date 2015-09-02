@@ -21,6 +21,7 @@
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
 					<h3>Cadastro Usuario</h3>
+                                        <div class="input-group">
                                         <span class="input-group-addon" id="sizing-addon2">Selecione o usuario</span>
                                         <select name="idUsuario">
                                             <option value="">--- Selecione ---</option>
@@ -30,6 +31,7 @@
                                                echo "<option value=".$row['idUsuario'].">".$row['login']."</option>" ;
                                             } ?>
                                         </select>
+                                        </div>
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Login</span>
 	  					<input type="text" class="form-control"  id="textFieldLogin" name="textFieldLogin" placeholder="Digite o novo nome do usuario" aria-describedby="sizing-addon2">
