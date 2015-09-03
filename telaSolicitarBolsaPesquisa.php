@@ -37,7 +37,7 @@
                                         
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="sizing-addon2">Nome</span> 
-                                                <select id="pessoa" name="pessoa" required="required">
+                                                <select id="pessoa" name="cpf" required="required">
                                                     <option value="">--- Selecione---</option>
                                                     <?php 
                                                     echo "<option value=' {$row2['cpf']} '> {$row2['nome']} </option> ";                                                                                                        
@@ -66,10 +66,10 @@
                                         </div>
                                         <div class="input-group">
                                             <span class="input-group-addon" id="sizing-addon2">Classificação</span>
-                                            <input type="radio" name="classificação" value="discente" checked>Pesquisa
-                                            <input type="radio" name="classificação" value="ensino">Ensino
-                                            <input type="radio" name="classificação" value="extensão">Extensão
-                                            <input type="radio" name="classificação" value="graduação">Graduação ou Pos-graduação
+                                            <input type="radio" name="classificacao" value="discente" checked>Pesquisa
+                                            <input type="radio" name="classificacao" value="ensino">Ensino
+                                            <input type="radio" name="classificacao" value="extensão">Extensão
+                                            <input type="radio" name="classificacao" value="graduação">Graduação ou Pos-graduação
                                         </div>
                                         
                                         <div class="input-group">
