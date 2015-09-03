@@ -24,7 +24,7 @@
 					</div>
                                         
                                          <div class="input-group">
-                                            <span class="input-group-addon" id="sizing-addon2">Carga Horaria</span>
+                                            <span class="input-group-addon" id="sizing-addon2">Função</span>
                                             <select id="nivel" name="nivel" required="required">
                                                 <option value="">---- Selecione ----</option>
                                                 <option value="1">Administrador Geral</option>

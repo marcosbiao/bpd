@@ -2,7 +2,7 @@
 
 $host= '127.0.0.1';
 $bd= 'root';
-$senhabd= 'biaobcet1';
+$senhabd= '';
 $database = 'bpd';
 	
 function conectaBanco ()
