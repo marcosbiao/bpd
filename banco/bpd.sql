@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Set-2015 às 21:51
+-- Generation Time: 03-Set-2015 às 16:39
 -- Versão do servidor: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -61,8 +61,31 @@ INSERT INTO `bolsaestagio` (`idbolsaEstagio`, `nomeInstituicao`, `curso`, `super
 
 CREATE TABLE IF NOT EXISTS `bolsapesquisa` (
 `idbolsaPesquisa` int(10) unsigned NOT NULL,
-  `pessoa_cpf` int(10) unsigned NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `pessoa_cpf` int(10) unsigned NOT NULL,
+  `programa_idPrograma` int(11) NOT NULL,
+  `dataCadastramento` date NOT NULL,
+  `nomeInstituicao` varchar(100) COLLATE utf8_bin NOT NULL,
+  `tipoCursoVinculado` varchar(25) COLLATE utf8_bin NOT NULL,
+  `nomeCursoVinculado` varchar(45) COLLATE utf8_bin NOT NULL,
+  `profissao` varchar(25) COLLATE utf8_bin DEFAULT NULL,
+  `sexo` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `funcaoPrograma` varchar(45) COLLATE utf8_bin NOT NULL,
+  `atribuicaoBolsista` varchar(20) COLLATE utf8_bin NOT NULL,
+  `declaracao1` int(11) NOT NULL,
+  `declaracao2` int(11) NOT NULL,
+  `declaracao3` int(11) NOT NULL,
+  `autorizado` int(11) NOT NULL,
+  `numeroAnos` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Extraindo dados da tabela `bolsapesquisa`
+--
+
+INSERT INTO `bolsapesquisa` (`idbolsaPesquisa`, `pessoa_cpf`, `programa_idPrograma`, `dataCadastramento`, `nomeInstituicao`, `tipoCursoVinculado`, `nomeCursoVinculado`, `profissao`, `sexo`, `funcaoPrograma`, `atribuicaoBolsista`, `declaracao1`, `declaracao2`, `declaracao3`, `autorizado`, `numeroAnos`) VALUES
+(1, 2864254562, 52, '0000-00-00', 'UFRB', 'Sequencial', 'Eng. Computação', NULL, NULL, 'Tutor', 'Tutor presencial', 1, 0, 0, 0, 6),
+(2, 2864254562, 52, '0000-00-00', 'UFRB', 'Lato Sensu', 'dfgfdgfd', NULL, NULL, 'Tutor', 'Tutor a distancia', 3, 0, 0, 0, 0),
+(3, 2864254562, 53, '0000-00-00', 'gfswfsdf', 'Lato Sensu', 'sdfsdfs', NULL, NULL, 'sdfsdfsdfsdfsdfsdf', '', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -155,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `programa` (
 `idPrograma` int(11) NOT NULL,
   `nome` varchar(45) COLLATE utf8_bin DEFAULT NULL,
   `data` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `programa`
@@ -178,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(45) COLLATE utf8_bin NOT NULL,
   `nivel` int(11) NOT NULL,
   `ativo` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -203,7 +226,7 @@ ALTER TABLE `bolsaestagio`
 -- Indexes for table `bolsapesquisa`
 --
 ALTER TABLE `bolsapesquisa`
- ADD PRIMARY KEY (`idbolsaPesquisa`,`pessoa_cpf`), ADD KEY `fk_bolsapesquisa_pessoa1_idx` (`pessoa_cpf`);
+ ADD PRIMARY KEY (`idbolsaPesquisa`,`pessoa_cpf`,`programa_idPrograma`), ADD KEY `fk_bolsapesquisa_pessoa1_idx` (`pessoa_cpf`), ADD KEY `fk_bolsapesquisa_programa1_idx` (`programa_idPrograma`);
 
 --
 -- Indexes for table `diaria`
@@ -248,7 +271,7 @@ MODIFY `idbolsaEstagio` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=
 -- AUTO_INCREMENT for table `bolsapesquisa`
 --
 ALTER TABLE `bolsapesquisa`
-MODIFY `idbolsaPesquisa` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `idbolsaPesquisa` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `diaria`
 --
@@ -263,12 +286,12 @@ MODIFY `idpassagem` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `programa`
 --
 ALTER TABLE `programa`
-MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=60;
+MODIFY `idPrograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
@@ -284,7 +307,8 @@ ADD CONSTRAINT `fk_bolsaestagio_programa1` FOREIGN KEY (`programa_idPrograma`) R
 -- Limitadores para a tabela `bolsapesquisa`
 --
 ALTER TABLE `bolsapesquisa`
-ADD CONSTRAINT `fk_bolsapesquisa_pessoa1` FOREIGN KEY (`pessoa_cpf`) REFERENCES `pessoa` (`cpf`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ADD CONSTRAINT `fk_bolsapesquisa_pessoa1` FOREIGN KEY (`pessoa_cpf`) REFERENCES `pessoa` (`cpf`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_bolsapesquisa_programa1` FOREIGN KEY (`programa_idPrograma`) REFERENCES `programa` (`idPrograma`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Limitadores para a tabela `diaria`
