@@ -60,33 +60,121 @@
                                         Dados da bolsa:
                                         <div class="input-group">
                                             <span class="input-group-addon" id="sizing-addon2">Tipo</span>
-                                            <input type="radio" name="tipo" value="discente" checked>Discente
-                                            <br>
-                                            <input type="radio" name="tipo" value="servidor">Servidor
+                                            <select id="tipoCurso" name="tipoCurso" required="required">
+                                                <option value="">--- Selecione ---</option>
+                                                <option value="Aperfeiçoamento">Aperfeiçoamento</option>
+                                                <option value="Bacharelado">Bacharelado</option>
+                                                <option value="Lato Sensu">Lato Sensu</option>
+                                                <option value="Licenciatura">Licenciatura</option>
+                                                <option value="Extensão">Extensão</option>
+                                                <option value="Sequencial">Sequencial</option>
+                                                <option value="Tecnologo">Tecnologo</option>
+                                                <option value="Mestrado">Mestrado</option>
+                                                <option value="Doutorado">Doutorado</option>
+                                            </select>
                                         </div>
                                         <div class="input-group">
-                                            <span class="input-group-addon" id="sizing-addon2">Classificação</span>
-                                            <input type="radio" name="classificacao" value="discente" checked>Pesquisa
-                                            <input type="radio" name="classificacao" value="ensino">Ensino
-                                            <input type="radio" name="classificacao" value="extensão">Extensão
-                                            <input type="radio" name="classificacao" value="graduação">Graduação ou Pos-graduação
+                                            <span class="input-group-addon" id="sizing-addon2">Nome do Curso</span>
+                                            <input type="text" required="required" placeholder="Digite o nome do cruso" class="form-control" id = "nomeCurso" name="nomeCurso"  aria-describedby="sizing-addon2">
+                                            
+                                            <span class="input-group-addon" id="sizing-addon2">Função no Programa- Tipo de Bolsa</span>
+                                            <input type="text" required="required" placeholder="Digite a função" class="form-control" id = "funcaoPrograma" name="funcaoPrograma"  aria-describedby="sizing-addon2">
                                         </div>
-                                        
-                                        <div class="input-group">
-	  					<span class="input-group-addon" id="sizing-addon2">Periodo de virgencia</span>
-                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataInicio" name="dataInicio">
-                                                à
-                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataFim" name="dataFim">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon" id="sizing-addon2">Valor Mensal da bolsa</span>
-                                            <input type="text" required="required" pattern="[0-9]+$" required="required"  class="form-control" id = "valorBolsa" name="valorBolsa" aria-describedby="sizing-addon2">
-              
-                                        </div>
-                                       
-                                        <div class="input-group">
-	  					<span class="input-group-addon" id="sizing-addon2">Atividades a serem desenvolvidas no local</span>
-                                                <input type="text" required="required" class="form-control" id = "atividadeLocal" name="atividadeLocal"  aria-describedby="sizing-addon2">
+                                        <div>
+   <!--Trecho de codigo sujo. Gerado automaticamente por um editor html
+        Porem corresponde a uma tabela com muito texto escrito    -->                                      
+                                           <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+                                            <tbody>
+                                              <tr>
+                                                <td><span
+                                           style="font-weight: bold;">Atribui&ccedil;&otilde;es
+                                          Bolsistas</span></td>
+                                              </tr>
+                                              <tr align="center">
+                                                <td><span
+                                           style="color: rgb(204, 0, 0);">A
+                                          op&ccedil;&atilde;o 1 e 2 dever&aacute; &nbsp;ser
+                                          assinalada de acordo com a fun&ccedil;&atilde;o &nbsp;a ser
+                                          exercida.</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                <ul>
+                                                  <li>Mediar a
+                                          comunica&ccedil;&atilde;o de conte&uacute;dos entre o
+                                          professor e os cursistas;</li>
+                                                  <li>Acompanhar as
+                                          atividades discentes, conforme o cronograma do curso;</li>
+                                                  <li>Apoiar o professor da
+                                          disciplina no desenvolvimento das atividades docentes;</li>
+                                                  <li>Estabelecer contato
+                                          permanente com os alunos e mediar &agrave;s atividades discentes;</li>
+                                                  <li>Colaborar com a
+                                          coordena&ccedil;&atilde;o do curso na
+                                          avalia&ccedil;&atilde;o dos estudantes;</li>
+                                                  <li>Participar das
+                                          atividades de capacita&ccedil;&atilde;o e
+                                          atualiza&ccedil;&atilde;o promovidas pela
+                                          Institui&ccedil;&atilde;o de Ensino;</li>
+                                                  <li>Elaborar
+                                          relat&oacute;rios mensais de acompanhamento dos alunos e encaminhar
+                                          &agrave; coordena&ccedil;&atilde;o de tutoria;</li>
+                                                  <li>Participar do processo
+                                          de avalia&ccedil;&atilde;o da disciplina sob
+                                          orienta&ccedil;&atilde;o do professor respons&aacute;vel;</li>
+                                                  
+                                                </ul>
+                                                    <input type="radio" name="atribuicaoBolsista" value="Tutor a distancia" checked><span style="font-weight: bold;">Tutor a Dist&acirc;ncia:</span> Manter regularidade de acesso ao AVA e dar retorno &agrave;s solicita&ccedil;&otilde;es do cursista no prazo m&aacute;ximo de 24 horas;
+                                                    <br>
+                                                    <input type="radio" name="atribuicaoBolsista" value="Tutor presencial"><span style="font-weight: bold;">Tutor Presencial:</span>Apoiar operacionalmente a coordena&ccedil;&atilde;o do curso nas atividades presenciais nos p&oacute;los, em especial na aplica&ccedil;&atilde;o de avalia&ccedil;&otilde;es.
+
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><span
+                                           style="font-weight: bold;">Declara&ccedil;&atilde;o</span></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Declaro ter
+                                          ci&ecirc;ncia dos direitos e das obriga&ccedil;&otilde;es
+                                          inerentes &agrave; qualidade de bolsista na
+                                          fun&ccedil;&atilde;o de TUTOR e nesse sentido, COMPROMETO-ME a
+                                          respeitar as cl&aacute;usulas descritas nas
+                                          atribui&ccedil;&otilde;es do bolsista deste Termo de
+                                          Compromisso. Declaro, ainda, sob as penas da lei, que as
+                                          informa&ccedil;&otilde;es prestadas s&atilde;o a
+                                          express&atilde;o da verdade e que preencho plenamente os requisitos
+                                          expressos na Lei 11.273/ 2006 e da Lei 11.502/2007, para o recebimento
+                                          da bolsa e que o recebimento da referida bolsa n&atilde;o
+                                          constituir&aacute; ac&uacute;mulo de bolsa de estudo ou
+                                          pesquisa conforme disposto no artigo 1&ordm; inciso III da lei
+                                          11.273/2006 exceto os casos disciplinados pelas portarias conjuntas
+                                          CAPES/CNPQ N&uacute;mero 01 de dezembro de 2007 e portaria
+                                          N&uacute;mero 02 de 10 de abril de 2013 e:<br>
+                                                <br>
+                                                <div>
+                                                <input type="checkbox" name="declaracao1" value="1">Que possuo formação de nível superior e tenho experiência no magistério do ensino básico
+                                                ou superior: <strong>Numero de anos de experiencia</strong> <input type="text" name="numeroAnos" size="1">
+                                                </div>
+                                                <input type="checkbox" name="declaracao2" value="2">Formação de nível superior e vínculo a programa de pós-graduação
+                                                <br>
+                                                <input type="checkbox" name="declaracao3" value="3">Formação de nível superior e Formação pós-graduada
+                                                <br>
+                                          Estou ciente, tamb&eacute;m, que a inobserv&acirc;ncia dos
+                                          requisitos citados acima implicar&aacute;(&atilde;o) no
+                                          cancelamento da(s) bolsa(s), com a restitui&ccedil;&atilde;o
+                                          integral e imediata dos recursos, de acordo com as regras prevista na
+                                          Resolu&ccedil;&atilde;o FNDE/CD n&ordm; 26 de 06 de junho
+                                          de 2009 com reda&ccedil;&atilde;o atualizada pela
+                                          resolu&ccedil;&atilde;o FNDE/CD n&ordm; 8 de 30 de abril de
+                                          2010 e que o n&atilde;o cumprimento dos dispositivos legais
+                                          acarretar&aacute; na suspens&atilde;o, por cinco anos, do
+                                          bolsista para recebimento de bolsas no &acirc;mbito da CAPES.</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+
+
                                         </div>
                                         <input type="submit" id = "submit" class="btn btn-default topElementos" value="Salvar" />
                                 </div>
