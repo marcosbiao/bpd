@@ -36,11 +36,11 @@
                     // chamando a função query da classe banco para adicionar ao banco de dados
                     $b = "INSERT INTO bolsapesquisa (pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos) VALUES "
                             . "($cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos)";
-                    echo $b;
+                    //echo $b;
                     noQuery($b);
     ?>
 <script>
     
-    //window.location = "telaPrincipal.php"
+    window.location = "telaPrincipal.php"
     
 </script>
