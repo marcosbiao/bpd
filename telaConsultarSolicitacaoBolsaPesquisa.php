@@ -2,7 +2,7 @@
 <html lang="pt">
     <?php 
     include("banco/banco.php");
-    $query = "Select be.idBolsaEstagio,be.pessoa_cpf,p.nome,be.programa_idPrograma,be.autorizado from bolsaestagio be join pessoa p where be.pessoa_cpf = p.cpf ";
+    $query = "SELECT bp.idbolsaPesquisa,pe.nome, p.nome as programa, bp.autorizado FROM bolsapesquisa bp join programa p on bp.programa_idPrograma = p.idPrograma join pessoa pe on bp.pessoa_cpf = pe.cpf ";
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
@@ -25,7 +25,6 @@
           <tr>
             <th>Codigo</th>
             <th>Nome</th>
-            <th>Cpf</th>
             <th>Programa</th>
             <th>Autorizado</th>
           </tr>
@@ -33,10 +32,9 @@
       <tbody>
           <?php 
           echo '<tr>';   
-              echo"<td>".$row['idBolsaEstagio']."</td>" ;
+              echo"<td>".$row['idbolsaPesquisa']."</td>" ;
               echo"<td>".$row['nome']."</td>" ;
-              echo"<td>".$row['pessoa_cpf']."</td>" ;
-              echo"<td>".$row['programa_idPrograma']."</td>" ;
+              echo"<td>".$row['programa']."</td>" ;
               if($row['autorizado']==1){
                   echo"<td>Autorizado</td>" ;
               }elseif ($row['autorizado']==2) {
@@ -47,10 +45,9 @@
               echo "</tr>";
           while($row = mysql_fetch_array($rs)){
               echo '<tr>';   
-              echo"<td>".$row['idBolsaEstagio']."</td>" ;
+              echo"<td>".$row['idbolsaPesquisa']."</td>" ;
               echo"<td>".$row['nome']."</td>" ;
-              echo"<td>".$row['pessoa_cpf']."</td>" ;
-              echo"<td>".$row['programa_idPrograma']."</td>" ;
+              echo"<td>".$row['programa']."</td>" ;
               if($row['autorizado']==1){
                   echo"<td>Autorizado</td>" ;
               }elseif ($row['autorizado']==2) {

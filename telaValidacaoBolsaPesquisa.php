@@ -2,7 +2,7 @@
 <html lang="pt">
 <?php 
     include("banco/banco.php");
-    $query = "SELECT be.idbolsaEstagio, be.pessoa_cpf, p.nome, be.cargaHoraria, be.valorBolsa, be.autorizado FROM bolsaestagio be join programa p on be.programa_idPrograma = p.idPrograma where be.autorizado=0";
+    $query = "SELECT bp.idbolsaPesquisa,pe.nome, p.nome as programa, bp.autorizado FROM bolsapesquisa bp join programa p on bp.programa_idPrograma = p.idPrograma join pessoa pe on bp.pessoa_cpf = pe.cpf where bp.autorizado=0 ";
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
@@ -24,30 +24,24 @@
       <thead>
           <tr>
             <th>Codigo</th>
-            <th>Cpf</th>
+            <th>Nome</th>
             <th>Programa</th>
-            <th>Carga horaria</th>
-            <th>Valor bolsa</th>
             <th>Autorizado</th>
           </tr>
       </thead>
       <tbody>
           <?php 
           echo '<tr>';   
-              echo"<td>".$row['idbolsaEstagio']."</td>" ; 
-              echo"<td>".$row['pessoa_cpf']."</td>" ;
+              echo"<td>".$row['idbolsaPesquisa']."</td>" ; 
               echo"<td>".$row['nome']."</td>" ;
-              echo"<td>".$row['cargaHoraria']."</td>" ;
-              echo"<td>".$row['valorBolsa']."</td>" ;
+              echo"<td>".$row['programa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
               echo "</tr>";
           while($row = mysql_fetch_array($rs)){
               echo '<tr>';   
-              echo"<td>".$row['idbolsaEstagio']."</td>" ; 
-              echo"<td>".$row['pessoa_cpf']."</td>" ;
+              echo"<td>".$row['idbolsaPesquisa']."</td>" ; 
               echo"<td>".$row['nome']."</td>" ;
-              echo"<td>".$row['cargaHoraria']."</td>" ;
-              echo"<td>".$row['valorBolsa']."</td>" ;
+              echo"<td>".$row['programa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
               echo "</tr>";
           }
@@ -56,11 +50,11 @@
   </table>
 </div>
     <div>
-            <form action="fachadaValidaBolsaEstagio.php" method="POST">
+            <form action="fachadaValidaBolsaPesquisa.php" method="POST">
                 <center>
                         <div>
                             <label>Digite o codigo que deseja validar</label>
-                            <input type="text" name="idbolsaEstagio" id="idbolsaEstagio" required="required">
+                            <input type="text" name="idbolsaPesquisa" id="idbolsaPesquisa" required="required">
                         </div>
 
                         <div>
@@ -69,11 +63,11 @@
                     </center>
             </form>
         
-        <form action="fachadaNaoValidaBolsaEstagio.php" method="POST">
+        <form action="fachadaNaoValidaBolsaPesquisa.php" method="POST">
                     <center>
                             <div>
                                 <label>Digite o codigo que deseja não validar</label>
-                                <input type="text" name="idbolsaEstagio" id="idbolsaEstagio" required="required">
+                                <input type="text" name="idbolsaPesquisa" id="idbolsaPesquisa" required="required">
                             </div>
 
                             <div>
