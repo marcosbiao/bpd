@@ -14,8 +14,8 @@
                     $dataRetorno= trim($_POST["dataRetorno"]);
                     $atividadeLocal= trim($_POST["atividadeLocal"]);
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO diaria (pessoa_cpf,programa_idPrograma,cidadeOrigem,cidadeDestino,dataSaida,dataRetorno,atividadeDesenvolvida) "
-                            . "VALUES ($cpf,$idPrograma,'$cidadeOrigem','$cidadeDestino','$dataSaida','$dataRetorno','$atividadeLocal')";
+                    $b = "INSERT INTO diaria (pessoa_cpf,programa_idPrograma,cidadeOrigem,cidadeDestino,dataSaida,dataRetorno,atividadeDesenvolvida,autorizado) "
+                            . "VALUES ($cpf,$idPrograma,'$cidadeOrigem','$cidadeDestino','$dataSaida','$dataRetorno','$atividadeLocal',0)";
                     //echo $b;
                     noQuery($b);
     ?>
