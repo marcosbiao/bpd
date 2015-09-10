@@ -24,15 +24,15 @@
                         $horaRetorno = 0;
                     }
                     $observacao = trim($_POST["observacao"]);
-                    $dataSolicitacao = NOW();
+                    $dataSolicitacao = 0;
                     // chamando a função query da classe banco para adicionar ao banco de dados
                     $b = "INSERT INTO `passagem`(`pessoa_cpf`, `programa_idPrograma`, `tipoPassagem`,`atividadeLocal`, `cidadeOrigem`, `cidadeDestino`, `dataSaida`, `horaPretendida`, `idaVolta`, `dataRetorno` , `horaRetorno`, `observacao`,`autorizado`, `dataSolicitacao`) "
                             . "VALUES($cpf,$idPrograma,'$tipoPassagem','$atividadeLocal','$cidadeOrigem','$cidadeDestino','$dataSaida','$horaPretendida',$idaVolta,'$dataRetorno','$horaRetorno','$observacao',0,$dataSolicitacao)";
-                    echo $b;
+                    //echo $b;
                     noQuery($b);
     ?>
 <script>
     
-    //window.location = "telaPrincipal.php"
+    window.location = "telaPrincipal.php"
     
 </script>
