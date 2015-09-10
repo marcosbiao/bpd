@@ -3,7 +3,7 @@
 include ("banco/banco.php");
 $idPrograma = $_POST["programa"];
 
-    $query = "UPDATE `diaria` SET `autorizado`= 1 WHERE `idDiaria` = $idDiaria";
+    $query = "SELECT sum(`valorBolsa`+ `valorAuxilioTrasporte`) FROM `bolsaestagio` = $idPrograma";
     //echo $query;
     noQuery($query);
 ?>
