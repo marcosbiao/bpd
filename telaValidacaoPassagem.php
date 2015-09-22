@@ -10,6 +10,7 @@
      
   <body>
     
+      
     <?php include("escolheCabecario.php");?>
       
     <div class="panel panel-default">
