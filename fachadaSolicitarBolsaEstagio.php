@@ -16,9 +16,9 @@
                     // instanciando a classe do banco
                     //$b = new database();
                     // pegando o nome e tirando os espaços no inicio e no fim com a funcao "trim"
-                    echo trim($_POST["cargaHoraria"]);
-                    echo $_POST['programa'];
-                    echo trim($_POST["cargaHoraria"]);  
+                     
+                    $Solicitante = trim($_POST["solicitante"]);
+                    $idUsuario = trim($_POST["idUsuario"]);
                     $pessoaCpf = $_POST["pessoa"];
                     $idPrograma = $_POST["programa"];
                     $nomeInstituicao = trim($_POST["nomeInstituicao"]);
@@ -32,8 +32,8 @@
                     $localEstagio = trim($_POST["localEstagio"]);
                     $atividadeLocal = trim($_POST["atividadeLocal"]);
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                        $b = "INSERT INTO bolsaestagio (pessoa_cpf,programa_idPrograma,nomeInstituicao,curso,supervisorEstagio,dataInicio,dataFim,cargaHoraria,valorBolsa,valorAuxilioTrasporte,localEstagio,atividades) VALUES "
-                            . "($pessoaCpf,$idPrograma,'$nomeInstituicao','$nomeCurso','$nomeSupervisor','$dataInicio','$dataFim',$cargaHoraria,$valorBolsa,$valorAuxilioTrasporte,'$localEstagio','$atividadeLocal')";
+                        $b = "INSERT INTO bolsaestagio (usuarioSolicitante,usuario_idUsuario,pessoa_cpf,programa_idPrograma,nomeInstituicao,curso,supervisorEstagio,dataInicio,dataFim,cargaHoraria,valorBolsa,valorAuxilioTrasporte,localEstagio,atividades) VALUES "
+                            . "('$Solicitante',$idUsuario,$pessoaCpf,$idPrograma,'$nomeInstituicao','$nomeCurso','$nomeSupervisor','$dataInicio','$dataFim',$cargaHoraria,$valorBolsa,$valorAuxilioTrasporte,'$localEstagio','$atividadeLocal')";
                     //echo $b;
                     noQuery($b);
     ?>

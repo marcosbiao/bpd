@@ -13,6 +13,10 @@
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
 					<h3>Dados obrigatorios</h3>
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Nome do usuario</span>
+	  					<input type="text" required="required" class="form-control"  id="nomeUsuario" name="nomeUsuario" placeholder="Digite o nome do usuario" aria-describedby="sizing-addon2">
+					</div>
 					<div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Login</span>
 	  					<input type="text" required="required" class="form-control"  id="textFieldLogin" name="textFieldLogin" placeholder="Digite o login do usuario" aria-describedby="sizing-addon2">

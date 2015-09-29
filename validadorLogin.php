@@ -24,6 +24,7 @@
       $_SESSION['UsuarioID'] = $resultado['idUsuario'];
       $_SESSION['UsuarioLogin'] = $resultado['login'];
       $_SESSION['UsuarioNivel'] = $resultado['nivel'];
+      $_SESSION['UsuarioNome'] = $resultado['nomeUsuario'];
       // Redireciona o visitante
       header("Location: restrito.php"); exit;
 

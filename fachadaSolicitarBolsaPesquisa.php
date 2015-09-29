@@ -6,7 +6,8 @@
                     // instanciando a classe do banco
                     //$b = new database();
                     // pegando o nome e tirando os espaços no inicio e no fim com a funcao "trim"
-                    
+                    $Solicitante = trim($_POST["solicitante"]);
+                    $idUsuario = trim($_POST["idUsuario"]);
                     $idPrograma = trim($_POST["programa"]);
                     $cpf = trim($_POST["cpf"]);
                     $nomeInstituicao = trim($_POST["nomeInstituicao"]);
@@ -34,8 +35,8 @@
                     //$dataCadastro = ;
                     //echo $dataCadastro;
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO bolsapesquisa (pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos) VALUES "
-                            . "($cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos)";
+                    $b = "INSERT INTO bolsapesquisa (usuarioSolicitante,usuario_idUsuario,pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos) VALUES "
+                            . "('$Solicitante',$idUsuario,$cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos)";
                     //echo $b;
                     noQuery($b);
     ?>

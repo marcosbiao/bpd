@@ -23,9 +23,9 @@
                                         <select name="idUsuario">
                                             <option value="">--- Selecione ---</option>
                                             <?php
-                                               echo "<option value=".$row['idUsuario'].">".$row['login']."</option>" ;
+                                               echo "<option value=".$row['idUsuario'].">".$row['nomeUsuario']."</option>" ;
                                                while($row = mysql_fetch_array($rs)){
-                                               echo "<option value=".$row['idUsuario'].">".$row['login']."</option>" ;
+                                               echo "<option value=".$row['idUsuario'].">".$row['nomeUsuario']."</option>" ;
                                             } ?>
                                         </select>
                                         </div>

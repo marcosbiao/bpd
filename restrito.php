@@ -11,7 +11,7 @@ if (!isset($_SESSION['UsuarioID'])) {
 ?>
 
 <h1>Página restrita</h1>
-Olá, <?php echo $_SESSION['UsuarioLogin'];
+Olá, <?php echo $_SESSION['UsuarioNome'];
     echo $_SESSION['UsuarioNivel'] ?>!
 <?php 
     header("Location: telaPrincipal.php");

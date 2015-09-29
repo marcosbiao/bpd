@@ -6,6 +6,8 @@
                     //$b = new database();
                     // pegando o nome e tirando os espaços no inicio e no fim com a funcao "trim"
                     
+                    $Solicitante = trim($_POST["solicitante"]);
+                    $idUsuario = trim($_POST["idUsuario"]);
                     $idPrograma = trim($_POST["programa"]);
                     $cpf = trim($_POST["pessoa"]);
                     $tipoPassagem = trim($_POST["tipoPassagem"]);
@@ -26,8 +28,8 @@
                     $observacao = trim($_POST["observacao"]);
                     $dataSolicitacao = 0;
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO `passagem`(`pessoa_cpf`, `programa_idPrograma`, `tipoPassagem`,`atividadeLocal`, `cidadeOrigem`, `cidadeDestino`, `dataSaida`, `horaPretendida`, `idaVolta`, `dataRetorno` , `horaRetorno`, `observacao`,`autorizado`, `dataSolicitacao`) "
-                            . "VALUES($cpf,$idPrograma,'$tipoPassagem','$atividadeLocal','$cidadeOrigem','$cidadeDestino','$dataSaida','$horaPretendida',$idaVolta,'$dataRetorno','$horaRetorno','$observacao',0,$dataSolicitacao)";
+                    $b = "INSERT INTO `passagem`(usuarioSolicitante,usuario_idUsuario,`pessoa_cpf`, `programa_idPrograma`, `tipoPassagem`,`atividadeLocal`, `cidadeOrigem`, `cidadeDestino`, `dataSaida`, `horaPretendida`, `idaVolta`, `dataRetorno` , `horaRetorno`, `observacao`,`autorizado`, `dataSolicitacao`) "
+                            . "VALUES('$Solicitante',$idUsuario,$cpf,$idPrograma,'$tipoPassagem','$atividadeLocal','$cidadeOrigem','$cidadeDestino','$dataSaida','$horaPretendida',$idaVolta,'$dataRetorno','$horaRetorno','$observacao',0,$dataSolicitacao)";
                     //echo $b;
                     noQuery($b);
     ?>

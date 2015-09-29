@@ -6,7 +6,10 @@
     $rs2 = Select ($query2);
     $row2 = mysql_fetch_array($rs2);
     ?>
-    <?php include("head.php"); ?>
+    <?php include("head.php");
+    $nomeUsuario = $_SESSION['UsuarioNome'];
+    $idUsuario = $_SESSION['UsuarioID'];
+    ?>
   <body>
     <?php include("escolheCabecario.php");?>
       
@@ -15,7 +18,11 @@
                         <form action = "fachadaSolicitarBolsaPesquisa.php" method = "POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
-        
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Solicitante</span>
+                                                <input type="text" required="required" class="form-control" id = "solicitante" name="solicitante"  aria-describedby="sizing-addon2" readonly="true" value="<?php echo $nomeUsuario ?>">
+                                        </div>
+                                        <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $idUsuario ?>">
                                         <center>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="sizing-addon2">Projetos</span> 

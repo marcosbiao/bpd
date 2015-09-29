@@ -24,6 +24,7 @@
       <thead>
           <tr>
             <th>ID Usuario</th>  
+            <th>Nome</th>
             <th>Login</th>
             <th>Nivel</th>
             <th>Ativo</th>
@@ -32,7 +33,8 @@
       <tbody>
           <?php 
           echo '<tr>';   
-              echo"<td>".$row['idUsuario']."</td>" ; 
+              echo"<td>".$row['idUsuario']."</td>" ;
+              echo"<td>".$row['nomeUsuario']."</td>" ; 
               echo"<td>".$row['login']."</td>" ;
               if($row['nivel']== 1){
                   echo"<td>Administrador</td>" ;
@@ -48,6 +50,7 @@
           while($row = mysql_fetch_array($rs)){
               echo '<tr>';   
               echo"<td>".$row['idUsuario']."</td>" ; 
+              echo"<td>".$row['nomeUsuario']."</td>" ; 
               echo"<td>".$row['login']."</td>" ;
               if($row['nivel']== 1){
                   echo"<td>Administrador</td>" ;

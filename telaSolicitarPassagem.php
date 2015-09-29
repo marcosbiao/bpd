@@ -9,7 +9,10 @@
     $row2 = mysql_fetch_array($rs2);
     ?>
 
-    <?php include("head.php");  ?>
+    <?php include("head.php");
+    $nomeUsuario = $_SESSION['UsuarioNome'];
+    $idUsuario = $_SESSION['UsuarioID'];
+    ?>
     <body>
        <?php  include("escolheCabecario.php");  ?>
         <h3>Solicitação de Estagio</h3>
@@ -19,7 +22,11 @@
                         <form action = "fachadaSolicitarPassagem.php" method = "POST">
 				<div class="panel panel-default jumbotron">	
 					<div id="vpav"></div>
-        
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Solicitante</span>
+                                                <input type="text" required="required" class="form-control" id = "solicitante" name="solicitante"  aria-describedby="sizing-addon2" readonly="true" value="<?php echo $nomeUsuario ?>">
+                                        </div>
+                                        <input type="hidden" name="idUsuario" id="idUsuario" value="<?php echo $idUsuario ?>">
                                         <center>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="sizing-addon2">Projetos</span> 
@@ -90,10 +97,10 @@
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Data de Volta</span>
-                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataRetorno" name="dataRetorno">
+                                                <input type="date" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataRetorno" name="dataRetorno">
                                              
                                                 <span class="input-group-addon" id="sizing-addon2">Hora Pretendida</span>
-                                                <input type="time" required="required" class="form-control" id = "horaPretendida" name="horaRetorno" placeholder="HH:MM" aria-describedby="sizing-addon2" maxlength="5">
+                                                <input type="time" class="form-control" id = "horaPretendida" name="horaRetorno" placeholder="HH:MM" aria-describedby="sizing-addon2" maxlength="5">
                                         
                                         </div>
                                         
