@@ -2,7 +2,7 @@
 <html lang="pt">
 <?php 
     include("banco/banco.php");
-    $query = "SELECT bp.idbolsaPesquisa,pe.nome, p.nome as programa, bp.autorizado FROM bolsapesquisa bp join programa p on bp.programa_idPrograma = p.idPrograma join pessoa pe on bp.pessoa_cpf = pe.cpf where bp.autorizado=0 ";
+    $query = "SELECT bp.idbolsaPesquisa,bp.usuarioSolicitante,pe.nome, p.nome as programa, bp.autorizado FROM bolsapesquisa bp join programa p on bp.programa_idPrograma = p.idPrograma join pessoa pe on bp.pessoa_cpf = pe.cpf where bp.autorizado=0 ";
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
@@ -24,7 +24,8 @@
       <thead>
           <tr>
             <th>Codigo</th>
-            <th>Nome</th>
+            <th>Solicitante</th>
+            <th>Beneficiado</th>
             <th>Programa</th>
             <th>Autorizado</th>
           </tr>
@@ -32,7 +33,8 @@
       <tbody>
           <?php 
           echo '<tr>';   
-              echo"<td>".$row['idbolsaPesquisa']."</td>" ; 
+              echo"<td>".$row['idbolsaPesquisa']."</td>";
+              echo"<td>".$row['usuarioSolicitante']."</td>" ;
               echo"<td>".$row['nome']."</td>" ;
               echo"<td>".$row['programa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
@@ -40,6 +42,7 @@
           while($row = mysql_fetch_array($rs)){
               echo '<tr>';   
               echo"<td>".$row['idbolsaPesquisa']."</td>" ; 
+              echo"<td>".$row['usuarioSolicitante']."</td>" ;
               echo"<td>".$row['nome']."</td>" ;
               echo"<td>".$row['programa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;

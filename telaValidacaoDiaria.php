@@ -2,7 +2,7 @@
 <html lang="pt">
 <?php 
     include("banco/banco.php");
-    $query = "SELECT d.idDiaria, pr.nome,p.nome as programa, d.autorizado FROM diaria d join programa pr on d.programa_idPrograma = pr.idPrograma join pessoa p on d.pessoa_cpf = p.cpf where d.autorizado=0 ";
+    $query = "SELECT d.idDiaria,d.usuarioSolicitante, p.nome,pr.nome as programa, d.autorizado FROM diaria d join programa pr on d.programa_idPrograma = pr.idPrograma join pessoa p on d.pessoa_cpf = p.cpf where d.autorizado=0 ";
     $rs = Select ($query);
     $row = mysql_fetch_array($rs);
     ?>
@@ -24,7 +24,8 @@
       <thead>
           <tr>
             <th>Codigo</th>
-            <th>Nome</th>
+            <th>Solicitante</th>
+            <th>Beneficiado</th>
             <th>Programa</th>
             <th>Autorizado</th>
           </tr>
@@ -33,6 +34,7 @@
           <?php 
           echo '<tr>';   
               echo"<td>".$row['idDiaria']."</td>" ; 
+              echo"<td>".$row['usuarioSolicitante']."</td>" ;
               echo"<td>".$row['nome']."</td>" ;
               echo"<td>".$row['programa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
@@ -40,6 +42,7 @@
           while($row = mysql_fetch_array($rs)){
               echo '<tr>';   
               echo"<td>".$row['idDiaria']."</td>" ; 
+              echo"<td>".$row['usuarioSolicitante']."</td>" ;
               echo"<td>".$row['nome']."</td>" ;
               echo"<td>".$row['programa']."</td>" ;
               echo"<td>".$row['autorizado']."</td>" ;
