@@ -59,7 +59,10 @@
                             <label>Digite o codigo que deseja validar</label>
                             <input type="text" name="idDiaria" id="idDiaria" required="required">
                         </div>
-
+                        <div>
+                            <label>Valor da diaria</label>
+                            <input type="text" name="valorDiaria" id="valorDiaria" required="required">
+                        </div>
                         <div>
                             <input type="submit" value="Validar">
                         </div>

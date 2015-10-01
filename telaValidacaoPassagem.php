@@ -66,7 +66,10 @@
                             <label>Digite o codigo que deseja validar</label>
                             <input type="text" name="idpassagem" id="idpassagem" required="required">
                         </div>
-
+                        <div>
+                            <label>Valor da bolsa pesquisa</label>
+                            <input type="text" name="valorPassagem" id="valorPassagem" required="required">
+                        </div>
                         <div>
                             <input type="submit" value="Validar">
                         </div>

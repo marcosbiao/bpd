@@ -59,6 +59,10 @@
                             <label>Digite o codigo que deseja validar</label>
                             <input type="text" name="idbolsaPesquisa" id="idbolsaPesquisa" required="required">
                         </div>
+                        <div>
+                            <label>Valor da bolsa pesquisa</label>
+                            <input type="text" name="valorPesquisa" id="valorPesquisa" required="required">
+                        </div>
 
                         <div>
                             <input type="submit" value="Validar">

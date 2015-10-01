@@ -2,8 +2,9 @@
 
 include ("banco/banco.php");
 $idpassagem = $_POST["idpassagem"];
+$valorPassagem = $_POST["valorPassagem"];
 
-    $query = "UPDATE `passagem` SET `autorizado`= 1 WHERE `idpassagem` = $idpassagem";
+    $query = "UPDATE `passagem` SET `autorizado`= 1, valorPassagem = $valorPassagem WHERE `idpassagem` = $idpassagem";
     //echo $query;
     noQuery($query);
 ?>
