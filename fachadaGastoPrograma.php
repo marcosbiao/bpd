@@ -3,27 +3,27 @@
 include ("banco/banco.php");
 $idPrograma = $_POST["programa"];
 
-    echo $idPrograma;
+    //echo $idPrograma;
     $query = "SELECT nome FROM `programa` where idPrograma = $idPrograma";
     $Rnome = Select($query);
     $nome = mysql_fetch_array($Rnome);
-    echo $nome['nome'];
+    //echo $nome['nome'];
     $query = "SELECT sum(`valorBolsa`+ `valorAuxilioTrasporte`) as valor FROM `bolsaestagio` where programa_idPrograma = $idPrograma";
     $RvalorBolsaEstagio = Select($query);
     $valorBolsaEstagio = mysql_fetch_array($RvalorBolsaEstagio);
-    echo $valorBolsaEstagio['valor'];
+    //echo $valorBolsaEstagio['valor'];
     $query = "SELECT sum(`valorPesquisa`) as valorPesquisa FROM `bolsapesquisa` where programa_idPrograma = $idPrograma";
     $RvalorBolsaPesquisa = Select($query);
     $valorBolsaPesquisa = mysql_fetch_array($RvalorBolsaPesquisa);
-    echo $valorBolsaPesquisa['valorPesquisa'];
+    //echo $valorBolsaPesquisa['valorPesquisa'];
     $query = "SELECT sum(`valorDiaria`)as valorDiaria FROM `diaria` where programa_idPrograma = $idPrograma";
     $RvalorDiaria = Select($query);
     $valorDiaria = mysql_fetch_array($RvalorDiaria);
-    echo $valorDiaria['valorDiaria'];
+    //echo $valorDiaria['valorDiaria'];
     $query = "SELECT sum(`valorPassagem`)as valorPassagem FROM `passagem` where programa_idPrograma = $idPrograma";
     $RvalorPassagem = Select($query);
     $valorPassagem = mysql_fetch_array($RvalorPassagem);
-    echo $valorPassagem['valorPassagem'];
+    //echo $valorPassagem['valorPassagem'];
     
  include("mpdf60/mpdf.php");
  
@@ -62,6 +62,6 @@ $idPrograma = $_POST["programa"];
 ?>
 <script>
     
-    window.location = "telaPrincipal.php"
+    //window.location = "telaPrincipal.php"
     
 </script>
