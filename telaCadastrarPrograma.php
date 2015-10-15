@@ -20,6 +20,11 @@
 	  					<span class="input-group-addon" id="sizing-addon2">Data</span>
                                                 <input type="date" class="form-control" pattern="[0-9]{4}/[0-9]{2}/[0-9]{2}" maxlength="10" min="2012-01-01" max="2020-01-01" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" name="textFieldData"/>
 					</div>
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Valor destinado</span>
+                                                <input type="text" class="form-control"  id="valorTotal" required="required" name="valorTotal" placeholder="30000" aria-describedby="sizing-addon2" pattern="[0-9]+$">
+					</div>
+                                        
                                         <div>
                                             <input type="submit" id = "bm" class="btn btn-default topElementos" value="Salvar" />
                                         </div>

@@ -9,13 +9,14 @@
                     
                     $nome = trim($_POST["textFieldNome"]);
                     $data = trim($_POST["textFieldData"]);
+                    $valorTotal = trim($_POST["valorTotal"]);
                     echo $data;
                     //$data2 = explode("-" or "/" or "." ,$data); 
                     //$data = implode("",$data2);
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO programa (nome,data) VALUES ('$nome','$data')";
+                    $b = "INSERT INTO programa (nome,data,valorTotal) VALUES ('$nome','$data',$valorTotal)";
                     //echo $b;
-                    noQuery($b);
+                    //noQuery($b);
     ?>
 <script>
     

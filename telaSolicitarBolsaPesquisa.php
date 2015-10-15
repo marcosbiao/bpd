@@ -62,6 +62,10 @@
 	  					<input type="text" required="required" class="form-control" id = "nomeInstituicao" name="nomeInstituicao" placeholder="Digite o seu nome da instituição" aria-describedby="sizing-addon2">
                                         </div>
                                         
+                                        <div class="input-group">
+	  					<span class="input-group-addon" id="sizing-addon2">Periodo de virgencia</span>
+                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataCadastramento" name="dataCadastramento">
+                                        </div>
                                         
                                         <br>
                                         Dados da bolsa:

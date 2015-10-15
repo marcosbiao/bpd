@@ -15,6 +15,8 @@
                     $nomeCursoVinculado = trim($_POST["nomeCurso"]);
                     $funcaoPrograma = trim($_POST["funcaoPrograma"]);
                     $atribuicaoBolsista = trim($_POST["atribuicaoBolsista"]);
+                    $dataCadastramento = ($_POST["dataCadastramento"]);
+                    echo $dataCadastramento;
                     $declaracao1=0;
                     if(isset($_POST["declaracao1"])){
                         $declaracao1 = trim($_POST["declaracao1"]);
@@ -35,13 +37,13 @@
                     //$dataCadastro = ;
                     //echo $dataCadastro;
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO bolsapesquisa (usuarioSolicitante,usuario_idUsuario,pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos) VALUES "
-                            . "('$Solicitante',$idUsuario,$cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos)";
+                    $b = "INSERT INTO bolsapesquisa (usuarioSolicitante,usuario_idUsuario,pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos,dataCadastramento) VALUES "
+                            . "('$Solicitante',$idUsuario,$cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos,'$dataCadastramento')";
                     //echo $b;
                     noQuery($b);
     ?>
 <script>
     
-    window.location = "telaPrincipal.php"
+//    window.location = "telaPrincipal.php"
     
 </script>
