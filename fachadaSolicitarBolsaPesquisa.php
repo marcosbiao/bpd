@@ -15,8 +15,33 @@
                     $nomeCursoVinculado = trim($_POST["nomeCurso"]);
                     $funcaoPrograma = trim($_POST["funcaoPrograma"]);
                     $atribuicaoBolsista = trim($_POST["atribuicaoBolsista"]);
-                    $dataCadastramento = ($_POST["dataCadastramento"]);
-                    echo $dataCadastramento;
+                    $dataInicio = ($_POST["dataInicio"]);
+                    $dataFim = ($_POST["dataFim"]);
+                    
+                            $arr = explode('/',$dataInicio);
+
+                            $arr2 = explode('/',$dataFim);
+
+                            $dia1 = $arr[2];
+
+                            $mes1 = $arr[1];
+
+                            $ano1 = $arr[0];
+
+                            $dia2 = $arr2[2];
+
+                            $mes2 = $arr2[1];
+
+                            $ano2 = $arr2[0];
+
+                            $a1 = ($ano2 - $ano1)*12;
+
+                            $m1 = ($mes2 - $mes1)+1;
+
+                            $m3 = ($m1 + $a1);
+
+                            echo "<br>total de meses=". $m3;
+                    
                     $declaracao1=0;
                     if(isset($_POST["declaracao1"])){
                         $declaracao1 = trim($_POST["declaracao1"]);
@@ -37,13 +62,13 @@
                     //$dataCadastro = ;
                     //echo $dataCadastro;
                     // chamando a função query da classe banco para adicionar ao banco de dados
-                    $b = "INSERT INTO bolsapesquisa (usuarioSolicitante,usuario_idUsuario,pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos,dataCadastramento) VALUES "
-                            . "('$Solicitante',$idUsuario,$cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos,'$dataCadastramento')";
+                    $b = "INSERT INTO bolsapesquisa (usuarioSolicitante,usuario_idUsuario,pessoa_cpf,programa_idPrograma,nomeInstituicao,tipoCursoVinculado,nomeCursoVinculado,funcaoPrograma,atribuicaoBolsista,declaracao1,declaracao2,declaracao3,numeroAnos,dataInicio,dataFim,numeroMeses) VALUES "
+                            . "('$Solicitante',$idUsuario,$cpf,$idPrograma,'$nomeInstituicao','$tipoCursoVinculado','$nomeCursoVinculado','$funcaoPrograma','$atribuicaoBolsista',$declaracao1,$declaracao2,$declaracao3,$numeroAnos,'$dataInicio','$dataFim',$m3)";
                     //echo $b;
                     noQuery($b);
     ?>
 <script>
     
-//    window.location = "telaPrincipal.php"
+    window.location = "telaPrincipal.php"
     
 </script>

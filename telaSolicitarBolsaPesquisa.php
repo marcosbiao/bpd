@@ -64,7 +64,9 @@
                                         
                                         <div class="input-group">
 	  					<span class="input-group-addon" id="sizing-addon2">Periodo de virgencia</span>
-                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataCadastramento" name="dataCadastramento">
+                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataInicio" name="dataInicio">
+                                                à
+                                                <input type="date" required="required" class="form-control" maxlength="10" placeholder="YYYY/MM/DD" aria-describedby="sizing-addon2" id = "dataFim" name="dataFim">
                                         </div>
                                         
                                         <br>

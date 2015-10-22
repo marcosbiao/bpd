@@ -16,10 +16,11 @@ $idPrograma = $_POST["programa"];
     $NvalorBolsaEstagioTotal = $valorBolsaEstagio['valor'];
     $NvalorBolsaEstagio = $valorBolsaEstagio['mensal'];
     
-    $query = "SELECT sum(`valorPesquisa`) as valorPesquisa FROM `bolsapesquisa` where programa_idPrograma = $idPrograma";
+    $query = "SELECT sum(`valorPesquisa`) as valorPesquisa,sum(`valorPesquisa`*numeroMeses) as total FROM `bolsapesquisa` where programa_idPrograma = $idPrograma";
     $RvalorBolsaPesquisa = Select($query);
     $valorBolsaPesquisa = mysql_fetch_array($RvalorBolsaPesquisa);
     $NvalorBolsaPesquisa = $valorBolsaPesquisa['valorPesquisa'];
+    $NvalorBolsaPesquisaTotal = $valorBolsaPesquisa['total'];
     //echo $valorBolsaPesquisa['valorPesquisa'];
     
     $query = "SELECT sum(`valorDiaria`)as valorDiaria FROM `diaria` where programa_idPrograma = $idPrograma";
@@ -64,6 +65,9 @@ $idPrograma = $_POST["programa"];
                 </tr>
                 <tr>
                     <td> Gasto mensal com Bolsa Pesquisa:{$NvalorBolsaPesquisa},00 reais </td>
+                </tr>
+                <tr>
+                    <td> Gasto total programado com Bolsa Pesquisa:{$NvalorBolsaPesquisaTotal},00 reais </td>
                 </tr>
                 <tr>
                     <td> Valor de diarias ja gasto: {$NvalorDiaria},00 reais </td>
